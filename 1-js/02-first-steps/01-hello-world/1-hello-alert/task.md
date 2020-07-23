@@ -1,4 +1,4 @@
-importance: 5
+važnost: 5
 
 ---
 
