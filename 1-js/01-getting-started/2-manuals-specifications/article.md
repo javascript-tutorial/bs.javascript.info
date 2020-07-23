@@ -1,42 +1,42 @@
 
-# Manuals and specifications
+# Priručnici i specifikacije
 
-This book is a *tutorial*. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other sources.
+Ova knjiga je *tutorijal*. Ima u cilju da ti postepeno pomogne da naučiš ovaj jezik. Ali kada se upoznaš sa osnovama, trebat će ti drugi izvori za učenje.
 
-## Specification
+## Specifikacija
 
-[The ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+[ECMA-262 specifikacija](https://www.ecma-international.org/publications/standards/Ecma-262.htm) sadržava dubinske, detaljne i formalizirane informacije o JavaScript-u.
 
-But being that formalized, it's difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place. But it's not for everyday use.
+Pošto je veoma formalizirano, teško je shvatiti odmah u početku. Tako da ako želite najpouzdaniji izvor informacija o detaljima ovog jezika, spefifikacija je dobro mjesto. Ali nije za svakodnevnu upotrebu.
 
-A new specification version is released every year. In-between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+Nova verzija specifikacije izlazi svake godine. Između ovih izdanja, najnoviji specifikacijski nacrt se nalazi na ovom linku <https://tc39.es/ecma262/>.
 
-To read about new bleeding-edge features, including those that are "almost standard" (so-called "stage 3"), see proposals at <https://github.com/tc39/proposals>.
+Da pročitate najnovije karakteristike, uključujući one koje su skoro postale "standard" (takozvana "faza 3"), pogledajte prijedloge na ovom linku <https://github.com/tc39/proposals>.
 
-Also, if you're in developing for the browser, then there are other specs covered in the [second part](info:browser-environment) of the tutorial.
+Isto tako, ako programirate u pretraživaču, postoje druge specifikacije koje su spomenute u [drugom dijelu](info:browser-environment) tutorijala.
 
-## Manuals
+## Priručnici
 
-- **MDN (Mozilla) JavaScript Reference** is a manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+- **MDN (Mozilla) JavaScript Referenca** je priručnik sa primjerima i ostalim informacijama. Odličan je izvor gdje možete naći dubinske informacije o individualnim funkcijama jezika, metodama, itd.
 
-    One can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+    Možete naći na ovom linku <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
 
-    Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+     Mada često je najbolje koristiti pretrage na internetu. Samo napišite "MDN [pojam]" u pretragu, na primjer <https://google.com/search?q=MDN+parseInt> da pretražite internet za `parseInt` funkciju.
 
 
-- **MSDN** – Microsoft manual with a lot of information, including JavaScript (often referred to as JScript). If one needs something specific to Internet Explorer, better go there: <http://msdn.microsoft.com/>.
+- **MSDN** – Microsoft priručnik sa mnoštvo informacija, uključujući JavaScript (često se na stranici naziva JScript). Ako neko želi nešto specifično za Internet Explorer, najbolje je otići ovdje: <http://msdn.microsoft.com/>.
 
-    Also, we can use an internet search with phrases such as "RegExp MSDN" or "RegExp MSDN jscript".
+    Isto tako, možemo koristiti pretrage sa frazama kao što su "RegExp MSDN" ili "RegExp MSDN jscript".
 
-## Compatibility tables
+## Tablice kompatibilinosti
 
-JavaScript is a developing language, new features get added regularly.
+JavaScript je jezik koji se razvija, nove karakteristike se dodaju redovno.
 
-To see their support among browser-based and other engines, see:
+Da vidimo njihovu podršku među pretraživačima i ostalim motorima, pogledajte ove linkove:
 
-- <http://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
-- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+- <http://caniuse.com> - po-funkciji tablice podrške, na primjer da vidimo koji motori podržavaju moderne kriptografske funkcije: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - tablica sa karakteristkima jezika i motorima koji podržavaju ili ne podržavaju te karakteristike.
 
-All these resources are useful in real-life development, as they contain valuable information about language details, their support etc.
+Svi ovi resursi su korisni tokom izrade pravih projekata, jer sadržavaju dragocjene informacije o detaljima jezika, njihovoj podršci itd.
 
-Please remember them (or this page) for the cases when you need in-depth information about a particular feature.
+Molimo vas da ih zapamtite (ili ovu stranicu) za slučajeve kada vam trebale dubinske informacije o nekoj posebnoj karakteristici jezika.
