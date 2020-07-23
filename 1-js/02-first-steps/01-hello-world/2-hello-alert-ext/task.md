@@ -1,9 +1,9 @@
-importance: 5
+važnost: 5
 
 ---
 
-# Show an alert with an external script
+# Pokaži alert sa eksternom skriptom
 
-Take the solution of the previous task <info:task/hello-alert>. Modify it by extracting the script content into an external file `alert.js`, residing in the same folder.
+Uzmi rješenje prošlog zadatka <info:task/hello-alert>. Izmjeni ga tako što ćeš sadržaj skripte prebaciti u eksternu datoteku `alert.js`, koja se nalazi u istom folderu.
 
-Open the page, ensure that the alert works.
+Otvori stranicu, budi siguran da alert radi ispravno.
