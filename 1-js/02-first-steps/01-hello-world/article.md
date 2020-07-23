@@ -41,7 +41,7 @@ Možete pokrenuti ovaj primjer tako što ćete pritisnuti "Play" tipku u gornjem
 `<script>` tag sadrži JavaScript kod koji se automatski izvršava kada pretraživač procesira tag.
 
 
-## Moderni markup (
+## Moderni markup 
 
 The `<script>` tag ima nekoliko atributa koji se rijetko koriste danas ali se i dalje mogu pronaći u starom kodu:
 
