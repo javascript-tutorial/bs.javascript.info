@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Show an alert
+# Pokaži alert
 
-Create a page that shows a message "I'm JavaScript!".
+Napravi stranicu koja pokazuje poruku "Ja sam JavaScript!".
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+Uradi bilo gdje, nije bitno, samo budi siguran da radi ispravno.
 
 [demo src="solution"]
 
