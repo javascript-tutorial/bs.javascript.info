@@ -1,46 +1,46 @@
-# Code editors
+# Kod editori
 
-A code editor is the place where programmers spend most of their time.
+Kod editor ili kod uređivač je mjesto gdje programeri provode većinu svog vremena.
 
-There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.
+Postoje dvije glavne vrste kod editora: IDE-ovi i lagani editori. Većina ljudi koristi po jedan alat svake vrste.
 
 ## IDE
 
-The term [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a "whole project." As the name suggests, it's not just an editor, but a full-scale "development environment."
+Pojam [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) ili integrisano razvojno okruženje odnosi se na snažni editor sa mnogo mogućnosti koji najčešće odvija radnju u "cijelom projektu". Kao što ime sugerira, nije samo običan editor, već potpuno razvojno okruženje.
 
-An IDE loads the project (which can be many files), allows navigation between files, provides autocompletion based on the whole project (not just the open file), and integrates with a version management system (like [git](https://git-scm.com/)), a testing environment, and other "project-level" stuff.
+IDE učitava projekat (koji se može sastojiti od više datoteka), omogućava navigaciju između datoteka, omogućava automatsko dovršavanje koda zasnovano na cijelom projektu (ne samo u jednoj datoteci), i integrira sistem za upravljanje verzijama (kao što je [git](https://git-scm.com/)), testno okruženje, i druge "projekt-level" stvari.
 
-If you haven't selected an IDE yet, consider the following options:
+Ako još niste odabrali IDE, možete uzeti u obzir sljedeće opcije:
 
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [WebStorm](http://www.jetbrains.com/webstorm/) (cross-platform, paid).
+- [Visual Studio Code](https://code.visualstudio.com/) (radi na različitim operativnim sistemima (cross-platform), besplatan).
+- [WebStorm](http://www.jetbrains.com/webstorm/) (radi na različitim operativnim sistemima (cross-platform), plaća se).
 
-For Windows, there's also "Visual Studio", not to be confused with "Visual Studio Code". "Visual Studio" is a paid and mighty Windows-only editor, well-suited for the .NET platform. It's also good at JavaScript. There's also a free version [Visual Studio Community](https://www.visualstudio.com/vs/community/).
+Za Windows, postoji "Visual Studio", kojeg ne treba miješati sa "Visual Studio Code". "Visual Studio" je program koji se plaća i on radi samo na Windows operativnom sistemu, dobro prilagođen za .NET platformu. Isto tako je dobar za JavaScript. Postoji i besplatna verzija na sljedećem linku [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
-Many IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer's salary, so just choose the best one for you.
+Mnoštvo IDE-ova se plaćaju, ali imaju period u kojem ga možete isprobati. Njihova cijena je većinom zanemarljiva u odnosu na platu prosječnog programera, tako da odaberite onaj koji vama najviše odgovara.
 
-## Lightweight editors
+## Lagani editori
 
-"Lightweight editors" are not as powerful as IDEs, but they're fast, elegant and simple.
+"Lagani editori" nisu snažni kao IDE-ovi, ali su brzi, elegantni i jednostavni.
 
-They are mainly used to open and edit a file instantly.
+Oni su najviše korišteni za otvaranje i brzu izmjenu datoteka.
 
-The main difference between a "lightweight editor" and an "IDE" is that an IDE works on a project-level, so it loads much more data on start, analyzes the project structure if needed and so on. A lightweight editor is much faster if we need only one file.
+Glavna razlika između "laganog editora" i "IDE" jeste to što IDE radi dobro kada je u pitanju projekat, učita odmah više datoteka na početku, analizira strukturu projekta ako je potrebna i tako dalje. Lagani editor je dosta brži ako želimo raditi samo sa jednom datotekom.
 
-In practice, lightweight editors may have a lot of plugins including directory-level syntax analyzers and autocompleters, so there's no strict border between a lightweight editor and an IDE.
+U praksi, lagani editori većinom imaju dosta više plugin-ova (dodataka) uključujući analizatore i automatsko dovršavanje koda na nivou direktorija, tako da nema neke tačne granice između IDE i laganog editora.
 
-The following options deserve your attention:
+Sljedeće opcije zaslužuju vašu pažnju:
 
-- [Atom](https://atom.io/) (cross-platform, free).
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
-- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
-- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+- [Atom](https://atom.io/) (cross-platform, besplatan).
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, besplatan).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, besplatan određeno vrijeme).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, besplatan).
+- [Vim](http://www.vim.org/) i [Emacs](https://www.gnu.org/software/emacs/) su isto zanimljivi ako ih znate koristiti.
 
-## Let's not argue
+## Nemojmo se prepirati
 
-The editors in the lists above are those that either I or my friends whom I consider good developers have been using for a long time and are happy with.
+Editori u listi iznad su editori koje ja koristim ili moji prijatelji koje smatram dobrim programerima koriste već duže vrijeme i zadovoljni su istim.
 
-There are other great editors in our big world. Please choose the one you like the most.
+Postoje još izvanrednih editora u našem velikom svijetu. Molim vas da izaberete onaj koji se vama najviše sviđa.
 
-The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+Izbor editora, kao i bilo kojeg drugog alata, je individualna stvar i zavisi od vaših projekata, navika kao i ličnih preferencija.
