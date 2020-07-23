@@ -1,17 +1,17 @@
 # Hello, world!
 
-This part of the tutorial is about core JavaScript, the language itself.
+Ovaj dio tutorijala je o jezgri samog jezika, JavaScript-a.
 
-But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We'll keep the amount of browser-specific commands (like `alert`) to a minimum so that you don't spend time on them if you plan to concentrate on another environment (like Node.js). We'll focus on JavaScript in the browser in the [next part](/ui) of the tutorial.
+Ali nam treba radno okruženje gdje ćemo pokretati naše skripte, i pošto je ova knjiga na internetu, pretraživač je dobar izbor. Nećemo puno koristiti komande specifične za pretraživače (kao što je `alert`) tako da ne provedete puno vremena na njih ako planirate da se koncentrirate na drugo okruženje (kao na primjer Node.js). Fokusirat ćemo se na JavaScript u pretraživaču u [sljedećem dijelu](/ui) tutorijala.
 
-So first, let's see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like `"node my.js"`.
+Prvo, hajmo vidjeti kako povezati skriptu sa web stranicom. Za okruženja sa serverske strane (kao što je Node.js), možete izvršiti skriptu sa ovom komandom `"node my.js"`.
 
 
-## The "script" tag
+## "script" oznaka (eng. tag)
 
-JavaScript programs can be inserted into any part of an HTML document with the help of the `<script>` tag.
+JavaScript programi mogu biti ubačeni u bilo koji dio HTML dokumenta uz pomoć `<script>` oznake.
 
-For instance:
+Kao na primjer:
 
 ```html run height=100
 <!DOCTYPE HTML>
@@ -19,7 +19,7 @@ For instance:
 
 <body>
 
-  <p>Before the script...</p>
+  <p>Prije skripte...</p>
 
 *!*
   <script>
@@ -27,7 +27,7 @@ For instance:
   </script>
 */!*
 
-  <p>...After the script.</p>
+  <p>...Poslije skripte.</p>
 
 </body>
 
@@ -35,24 +35,24 @@ For instance:
 ```
 
 ```online
-You can run the example by clicking the "Play" button in the right-top corner of the box above.
+Možete pokrenuti ovaj primjer tako što ćete pritisnuti "Play" tipku u gornjem desnom uglu kocke iznad.
 ```
 
-The `<script>` tag contains JavaScript code which is automatically executed when the browser processes the tag.
+`<script>` tag sadrži JavaScript kod koji se automatski izvršava kada pretraživač procesira tag.
 
 
-## Modern markup
+## Moderni markup (
 
-The `<script>` tag has a few attributes that are rarely used nowadays but can still be found in old code:
+The `<script>` tag ima nekoliko atributa koji se rijetko koriste danas ali se i dalje mogu pronaći u starom kodu:
 
-The `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
-: The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic, we'll talk about modules in another part of the tutorial.
+`type` atribut: <code>&lt;script <u>type</u>=...&gt;</code>
+: Stari HTML standard, HTML4, je zahtijevao da skripta ima `type`. Obično je to bilo `type="text/javascript"`. Ovo više nije potrebno. Isto tako, moderni HTML standard totalno je promijenio značenje ovog atributa. Sada, može se koristiti za JavaScript module. Ali to je napredna tema, pričat ćemo o modulima u drugom dijelu tutorijala.
 
-The `language` attribute: <code>&lt;script <u>language</u>=...&gt;</code>
-: This attribute was meant to show the language of the script. This attribute no longer makes sense because JavaScript is the default language. There is no need to use it.
+`language` atribut: <code>&lt;script <u>language</u>=...&gt;</code>
+: Ovaj atribut je trebao predstavljati jezik date skripte. Ovaj atribut više nema smisla za koristiti, jer je JavaScript uobičajeni jezik. Nema razloga da se ovaj atribut više koristi.
 
-Comments before and after scripts.
-: In really ancient books and guides, you may find comments inside `<script>` tags, like this:
+Komentari prije i poslije skripta.
+: U veoma starim knjigama i vodičima, možete pronaći komentare unutar `<script>` tag-ova, kao na primjer ovdje:
 
     ```html no-beautify
     <script type="text/javascript"><!--
@@ -60,28 +60,28 @@ Comments before and after scripts.
     //--></script>
     ```
 
-    This trick isn't used in modern JavaScript. These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+    Ovaj trik se ne koristi u modernom JavaScript-u. Ovi komentari kriju JavaScript kod od starih pretraživača koji ne znaju kako da procesiraju `<script>` tag. Pošto pretraživači koji su izašli u zadnjih 15 godina nemaju više ovaj problem, ovaj tip komentara može vam pomoći da identifikujete veoma star kod.
 
 
-## External scripts
+## Eksterne skripte
 
-If we have a lot of JavaScript code, we can put it into a separate file.
+Ako imamo puno JavaScript koda, možemo ga staviti u posebnu datoteku.
 
-Script files are attached to HTML with the `src` attribute:
+Skript datoteke su povezane sa HTMLom preko `src` atributa:
 
 ```html
-<script src="/path/to/script.js"></script>
+<script src="/put/do/script.js"></script>
 ```
 
-Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"` would mean a file `"script.js"` in the current folder.
+Ovdje, `/put/do/script.js` je apsolutan put do skripte od korijena stranice. Možete pružiti relativni put od trenutne stranice. Na primjer, `src="script.js"` bi značilo `"script.js"` je u trenutnom folderu.
 
-We can give a full URL as well. For instance:
+Možemo dati i potpuni URL također. Na primjer:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
-To attach several scripts, use multiple tags:
+Da bismo povezali više skript datoteka, koristimo više tagova:
 
 ```html
 <script src="/js/script1.js"></script>
@@ -90,43 +90,43 @@ To attach several scripts, use multiple tags:
 ```
 
 ```smart
-As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+Kao pravilo, samo najjednostavnije skripte se postavljaju direktno u HTML. One koje su više kompleksne trebaju biti u eksternim, odvojenim datotekama.
 
-The benefit of a separate file is that the browser will download it and store it in its [cache](https://en.wikipedia.org/wiki/Web_cache).
+Prednost odvojene datoteke jeste to da će je pretraživač preuzeti i spasiti u [keš memoriju](https://en.wikipedia.org/wiki/Web_cache).
 
-Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.
+Ostale stranice koje uzimaju istu skriptu kao referencu uzeti će iz keš memorije umjesto ponovnog preuzimanja, tako da se ta datoteka samo jednom treba preuzeti.
 
-That reduces traffic and makes pages faster.
+To smanjuje promet i ubrzava stranicu.
 ```
 
-````warn header="If `src` is set, the script content is ignored."
-A single `<script>` tag can't have both the `src` attribute and code inside.
+````warn header="Ako je `src` postavljen, sadržaj skripte će biti ignorisan."
+Jedan `<script>` tag ne može imati oboje, i `src` atribut i kod iznutra.
 
-This won't work:
+Ovo neće raditi:
 
 ```html
-<script *!*src*/!*="file.js">
-  alert(1); // the content is ignored, because src is set
+<script *!*src*/!*="datoteka.js">
+  alert(1); // sadržaj je ignorisan, jer je postavljen src
 </script>
 ```
 
-We must choose either an external `<script src="…">` or a regular `<script>` with code.
+Moramo odabrati ili eksterni `<script src="…">` ili obični `<script>` tag sa kodom.
 
-The example above can be split into two scripts to work:
+Primjer iznad može biti podijeljen na dvije skripte kako bi radio:
 
 ```html
-<script src="file.js"></script>
+<script src="datoteka.js"></script>
 <script>
   alert(1);
 </script>
 ```
 ````
 
-## Summary
+## Sažetak
 
-- We can use a `<script>` tag to add JavaScript code to a page.
-- The `type` and `language` attributes are not required.
-- A script in an external file can be inserted with `<script src="path/to/script.js"></script>`.
+- Možemo koristiti `<script>` tag da dodamo JavaScript kod na stranicu.
+- `type` i `language` atributi više nisu potrebni.
+- Skripta u eksternoj datoteci može biti dodana sa `<script src="put/do/script.js"></script>`.
 
 
-There is much more to learn about browser scripts and their interaction with the webpage. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves with browser-specific implementations of it. We'll be using the browser as a way to run JavaScript, which is very convenient for online reading, but only one of many.
+Ima još mnogo toga da se nauči o skriptama u pretraživaču kao i o njihovoj interakciji sa web stranicom. Ali moramo imati na umu da je ovaj dio tutorijala posvećen JavaScript jeziku, tako da ne želimo odvratiti pažnju sa implementacijama specifičnim za pretraživače. Koristit ćemo pretraživač kao način da pokrenemo JavaScript, što je veoma pogodno za online čitanje, ali to je samo jedan od načina.
