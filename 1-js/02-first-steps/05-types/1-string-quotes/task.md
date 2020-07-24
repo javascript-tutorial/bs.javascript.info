@@ -1,10 +1,10 @@
-importance: 5
+važnost: 5
 
 ---
 
-# String quotes
+# String navodnici
 
-What is the output of the script?
+Koji je izlaz skripte, šta će se prikazati?
 
 ```js
 let name = "Ilya";
