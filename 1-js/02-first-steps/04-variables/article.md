@@ -1,273 +1,275 @@
-# Variables
+# Promjenljive ili varijable (eng. variables)
 
-Most of the time, a JavaScript application needs to work with information. Here are two examples:
-1. An online shop -- the information might include goods being sold and a shopping cart.
-2. A chat application -- the information might include users, messages, and much more.
+Većinu vremena, JavaScript aplikacija mora raditi sa informacijama. Evo dva primjera:
+1. Online prodavnica -- informacije mogu uključivati proizvode koji se prodaju i kolica za kupovinu (šta je u njoj).
+2. Aplikacija za razgovor -- informacije mogu uključivati korisnike, poruke i još mnogo toga.
 
-Variables are used to store this information.
+Varijable se koriste da se pohrane ove informacije.
 
-## A variable
+## Varijabla
 
-A [variable](https://en.wikipedia.org/wiki/Variable_(computer_science)) is a "named storage" for data. We can use variables to store goodies, visitors, and other data.
+[Varijabla](https://en.wikipedia.org/wiki/Variable_(computer_science)) je "imenovano spremište" (eng. named storage) za podatke. Možemo koristiti varijable da pohranimo poruke, posjetioce, i ostale podatke.
 
-To create a variable in JavaScript, use the `let` keyword.
+Da napravimo varijablu u JavaScript-u, kortimo `let` ključnu riječ (eng. keyword).
 
-The statement below creates (in other words: *declares*) a variable with the name "message":
+Izjava ispod pravi (u drugim riječima: *proglašava*) varijablu sa imenom "poruka".
 
 ```js
-let message;
+let poruka;
 ```
 
-Now, we can put some data into it by using the assignment operator `=`:
+Sada, možemo staviti podatke u nju putem operatora dodjele `=`:
 
 ```js
-let message;
+let poruka;
 
 *!*
-message = 'Hello'; // store the string
+poruka = 'Hello'; // store the string
 */!*
 ```
 
-The string is now saved into the memory area associated with the variable. We can access it using the variable name:
+Tekst (eng. string) je sada spašen u memorijsko područje koje se odnosi na varijablu. Možemo ga pristupiti koristeći ime same varijable:
 
 ```js run
-let message;
-message = 'Hello!';
+let poruka;
+poruka = 'Hello!';
 
 *!*
-alert(message); // shows the variable content
+alert(poruka); // prikazuje sadržaj varijable
 */!*
 ```
 
-To be concise, we can combine the variable declaration and assignment into a single line:
+Da budemo sažeti, možemo kombinirati deklaraciju i dodjelu neke vrijednosti varijabli u jednu liniju:
 
 ```js run
-let message = 'Hello!'; // define the variable and assign the value
+let poruka = 'Hello!'; // deklariši varijablu i dodijeli vrijednost
 
-alert(message); // Hello!
+alert(poruka); // Hello!
 ```
 
-We can also declare multiple variables in one line:
+Možemo deklarisati više varijable u jednoj liniji:
 
 ```js no-beautify
-let user = 'John', age = 25, message = 'Hello';
+let korisnik = 'John', godine = 25, poruka = 'Hello';
 ```
 
-That might seem shorter, but we don't recommend it. For the sake of better readability, please use a single line per variable.
+To može izgledati kraće, ali mi to ne preporučujemo. Zarad bolje čitljivosti, molim vas koristite jednu liniju po varijabli.
 
-The multiline variant is a bit longer, but easier to read:
+Multilinijska varijanta je malo duža, ali lakša za pročitati:
 
 ```js
-let user = 'John';
-let age = 25;
-let message = 'Hello';
+let korisnik = 'John';
+let godine = 25;
+let poruka = 'Hello';
 ```
 
-Some people also define multiple variables in this multiline style:
+Neki ljudi isto deklarišu više varijabli u ovom multilinijskom stilu:
 ```js no-beautify
-let user = 'John',
-  age = 25,
-  message = 'Hello';
+let korisnik = 'John',
+  godine = 25,
+  poruka = 'Hello';
 ```
 
-...Or even in the "comma-first" style:
+...I čak i u ovom "zarez-prvo" stilu:
 
 ```js no-beautify
-let user = 'John'
-  , age = 25
-  , message = 'Hello';
+let korisnik = 'John'
+  , godine = 25
+  , poruka = 'Hello';
 ```
 
-Technically, all these variants do the same thing. So, it's a matter of personal taste and aesthetics.
+Tehnički, sve ove varijante rade istu stvar. Tako da je ovo pitanje ličnog ukusa i estetike.
 
-````smart header="`var` instead of `let`"
-In older scripts, you may also find another keyword: `var` instead of `let`:
+````smart header="`var` umjesto `let`"
+U starijim skriptama, možete naći još jednu ključnu riječ: `var` umjesto `let`:
 
 ```js
-*!*var*/!* message = 'Hello';
+*!*var*/!* poruka = 'Hello';
 ```
 
-The `var` keyword is *almost* the same as `let`. It also declares a variable, but in a slightly different, "old-school" way.
+`var` ključna rijec je *skoro* ista kao `let`. Isto deklariše varijablu, ali u malom drugačijem, "stara-škola" (eng. old-school) načinu.
 
-There are subtle differences between `let` and `var`, but they do not matter for us yet. We'll cover them in detail in the chapter <info:var>.
+Postoji manjih razlika između `let` i `var`, ali one za nas nisu još bitne. Proučit ćemo ih u detalje u poglavlju <info:var>.
 ````
 
-## A real-life analogy
+## Stvarna životna analogija
 
-We can easily grasp the concept of a "variable" if we imagine it as a "box" for data, with a uniquely-named sticker on it.
+Možemo lagano shvatiti koncept "varijable" ako je zamislimo kao "kutiju" za podatke, sa unikatno imenovanim naljepnicama.
 
-For instance, the variable `message` can be imagined as a box labeled `"message"` with the value `"Hello!"` in it:
+Na primjer, varijabla `poruka` može biti zamišljena kao kutija na kojoj piše `"poruka"` koja u sebi ima vrijednost "Hello!".
 
 ![](variable.svg)
 
-We can put any value in the box.
+Možemo postaviti bilo koju vrijednost u kutiju.
 
-We can also change it as many times as we want:
+Isto tako je možemo promijeniti koliko puta hoćemo:
 ```js run
-let message;
+let poruka;
 
-message = 'Hello!';
+poruka = 'Hello!';
 
-message = 'World!'; // value changed
+poruka = 'World!'; // vrijednost promijenjena
 
-alert(message);
+alert(poruka);
 ```
 
-When the value is changed, the old data is removed from the variable:
+Kada je vrijednost promijenjena, stari podaci su izbrisani iz te varijable:
 
 ![](variable-change.svg)
 
-We can also declare two variables and copy data from one into the other.
+Možemo isto deklarisati (ili proglasiti) dvije varijable i kopirati podatke iz jedne u drugu.
 
 ```js run
 let hello = 'Hello world!';
 
-let message;
+let poruka;
 
 *!*
-// copy 'Hello world' from hello into message
-message = hello;
+// kopiraj 'Hello world' vrijednost iz hello u poruka
+poruka = hello;
 */!*
 
-// now two variables hold the same data
+// sada ove dvije varijable imaju istu vrijednost
 alert(hello); // Hello world!
-alert(message); // Hello world!
+alert(poruka); // Hello world!
 ```
 
-````warn header="Declaring twice triggers an error"
-A variable should be declared only once.
-
-A repeated declaration of the same variable is an error:
+````warn header="Deklarisanje dva puta će izazvati grešku"
+Varijabla se treba samo jednom deklarisati.
+ 
+Ponovna deklaracija iste varijable je greška:
 
 ```js run
-let message = "This";
+let poruka = "Ovo";
 
-// repeated 'let' leads to an error
-let message = "That"; // SyntaxError: 'message' has already been declared
+// ponovljeno 'let' će izazvati grešku
+let poruka = "Ono"; // SyntaxError: 'poruka' has already been declared (ova greška će se pojaviti)
 ```
-So, we should declare a variable once and then refer to it without `let`.
+Tako da varijablu samo jednom trebamo deklarisati, i onda se na nju odnositi bez `let`.
 ````
 
-```smart header="Functional languages"
-It's interesting to note that there exist [functional](https://en.wikipedia.org/wiki/Functional_programming) programming languages, like [Scala](http://www.scala-lang.org/) or [Erlang](http://www.erlang.org/) that forbid changing variable values.
+```smart header="Funkcionalni jezici"
+Interesantno je napomenuti da postoje [funkcionalni](https://en.wikipedia.org/wiki/Functional_programming) programski jezici, kao što je [Scala](http://www.scala-lang.org/) ili [Erlang](http://www.erlang.org/) koji zabranjuju mijenjanje vrijednosti varijable.
 
-In such languages, once the value is stored "in the box", it's there forever. If we need to store something else, the language forces us to create a new box (declare a new variable). We can't reuse the old one.
+U takvim jezicima, kada je vrijednost pohranjena "u kutiju", tu je zauvijek. Ako želimo da pohranimo nešto drugo, jezik nas tjera da napravimo novu kutiju (da deklarišemo novu varijablu). Ne možemo ponovo upotrijebiti staru.
 
-Though it may seem a little odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits. Studying such a language (even if you're not planning to use it soon) is recommended to broaden the mind.
+Iako zvuči malo čudno na prvi pogled, ovi jezici su veoma sposobni za ozbiljan razvoj. Još bolje od toga, postoje područja kao što su paralelno računanje gdje ova limitacija doprinosi određene prednosti. Učenje ovakvih jezika (iako ih ne planirate koristiti ubrzo) je preporučeno da proširite um.
 ```
 
-## Variable naming [#variable-naming]
+## Imenovanje varijabli [#variable-naming]
 
-There are two limitations on variable names in JavaScript:
+Postoje dvije limitacije kada imenujemo varijable u JavaScript-u:
 
-1. The name must contain only letters, digits, or the symbols `$` and `_`.
-2. The first character must not be a digit.
+1. Ime mora sadržiti samo slova, brojeve, ili simbole `$` i `_`.
+2. Prvi znak ne smije biti broj.
 
-Examples of valid names:
+Primjeri ispravnih imena:
 
 ```js
-let userName;
+let korisničkoIme;
 let test123;
 ```
 
-When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki/CamelCase) is commonly used. That is: words go one after another, each word except first starting with a capital letter: `myVeryLongName`.
+Kada ime sadrži više riječi, [camelCase](https://en.wikipedia.org/wiki/CamelCase) se često koristi. To je: riječi idu jedna iza druge, svaka riječ osim prve započinje sa velikim slovom `mojeVeomaDugoIme`.
 
-What's interesting -- the dollar sign `'$'` and the underscore `'_'` can also be used in names. They are regular symbols, just like letters, without any special meaning.
+Šta je interesantno -- znak dolara `'$'` i donja crtica `'_'` mogu se isto koristiti u imenima. To su obični simboli, kao i slova, bez specijalnog značenja.
 
-These names are valid:
+Ova imena su ispravna:
 
 ```js run untrusted
-let $ = 1; // declared a variable with the name "$"
-let _ = 2; // and now a variable with the name "_"
+let $ = 1; // deklarišemo varijablu sa imenom "$"
+let _ = 2; // a sada varijablu sa imenom "_"
 
 alert($ + _); // 3
 ```
 
-Examples of incorrect variable names:
+Primjeri netačnih imena:
 
 ```js no-beautify
-let 1a; // cannot start with a digit
+let 1a; // ne smije započeti sa brojem
 
-let my-name; // hyphens '-' aren't allowed in the name
+let my-name; // crtica nije dozvoljena u imenu
 ```
 
-```smart header="Case matters"
-Variables named `apple` and `AppLE` are two different variables.
+```smart header="Velika i mala slova su bitna"
+Varijable nazvane `jabuka` i `jabuKA` su dvije različite varijable.
 ```
 
-````smart header="Non-Latin letters are allowed, but not recommended"
-It is possible to use any language, including cyrillic letters or even hieroglyphs, like this:
+````smart header="Ne latinska slova su dozvoljena, ali nije preporučeno"
+/ Napomena: Ja prevodim sa engleskog na bosanski jezik, zato koristim č,ć,š,đ,ž u varijablama, ali preporučeno je koristiti normalna engleska slova. Od sada će varijable i cijeli kod biti na engleskom jeziku, ne brinite, i dalje ću prevesti tekst zadataka, ali će kod u istim biti na engleski. - prevodioc @aiyodev /
+
+Moguće je koristiti bilo koji jezik, uključujući ćirilična slova i čak hieroglife, kao ovdje:
 
 ```js
 let имя = '...';
 let 我 = '...';
 ```
 
-Technically, there is no error here. Such names are allowed, but there is an international convention to use English in variable names. Even if we're writing a small script, it may have a long life ahead. People from other countries may need to read it some time.
+Tehnički, ovdje nema greške. Ovakva imena su dozvoljena, ali postoji internacionalna konvencija da se koristi engleski jezik prilikom imenovanja. Iako pišemo malu skriptu, može imati dug život ispred sebe. Ljudi iz ostalih zemalja će možda nekada trebati da pročitaju.
 ````
 
-````warn header="Reserved names"
-There is a [list of reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), which cannot be used as variable names because they are used by the language itself.
+````warn header="Rezervisana imena"
+Postoji [lista rezervisanih riječi](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), koje se ne mogu koristiti kao imena varijabli zato što se koriste od samog jezika.
 
-For example: `let`, `class`, `return`, and `function` are reserved.
+Na primjer: `let`, `class`, `return`, i `function` su rezervisani.
 
-The code below gives a syntax error:
+Kod ispod će izbaciti sintaksnu grešku:
 
 ```js run no-beautify
-let let = 5; // can't name a variable "let", error!
-let return = 5; // also can't name it "return", error!
+let let = 5; // ne možemo nazvati varijablu "let", greska!
+let return = 5; // ispod je ne možemo nazvati "return", greska!
 ```
 ````
 
-````warn header="An assignment without `use strict`"
+````warn header="Dodjela vrijednosti bez `use strict`"
 
-Normally, we need to define a variable before using it. But in the old times, it was technically possible to create a variable by a mere assignment of the value without using `let`. This still works now if we don't put `use strict` in our scripts to maintain compatibility with old scripts.
+Obično, trebamo definisati varijablu prije nego što je možemo koristiti. Ali u starim vremenima, tehnički je bilo moguće da se napravi varijabla sa dodjelom bez korištenja `let`. Ovo i dalje radi ako ne koristimo `use strict` u našim skriptama kako bismo održali kompatibilnost sa starim skriptama.
 
 ```js run no-strict
-// note: no "use strict" in this example
+// napomena: nema "use strict" u ovom primjeru
 
-num = 5; // the variable "num" is created if it didn't exist
+num = 5; // varijabla "num" (eng. number - broj) je kreirana ako nije postojala već
 
 alert(num); // 5
 ```
 
-This is a bad practice and would cause an error in strict mode:
+Ovo je loša praksa i može izazvati grešku u strogom načinu rada:
 
 ```js
 "use strict";
 
 *!*
-num = 5; // error: num is not defined
+num = 5; // greška: num nije definisan
 */!*
 ```
 ````
 
-## Constants
+## Konstante
 
-To declare a constant (unchanging) variable, use `const` instead of `let`:
+Da deklarišemo konstantnu (nepromjenljivu) varijablu, koristimo `const` umjesto `let`:
 
 ```js
-const myBirthday = '18.04.1982';
+const myBirthday = '18.04.1982'; //
 ```
 
-Variables declared using `const` are called "constants". They cannot be reassigned. An attempt to do so would cause an error:
+Varijable deklarisane sa `const` se zovu "konstante" (eng. constants). Ne mogu im se mijenjati vrijednosti. Pokušaj da to uradimo izavat će grešku:
 
 ```js run
 const myBirthday = '18.04.1982';
 
-myBirthday = '01.01.2001'; // error, can't reassign the constant!
+myBirthday = '01.01.2001'; // greška, ne može se promijeniti vrijednost konstante!
 ```
 
-When a programmer is sure that a variable will never change, they can declare it with `const` to guarantee and clearly communicate that fact to everyone.
+Kada je programer siguran da se varijabla nikada neće promijeniti, onda je mogu deklarisati putem `const` da garantuju i da jasno komuniciraju tu činjenicu svima.
 
 
-### Uppercase constants
+### Konstante napisane velikim slovima
 
-There is a widespread practice to use constants as aliases for difficult-to-remember values that are known prior to execution.
+Postoji široko rasprostranjena praksa da se konstante koriste kao nadimak za vrijednosti koje su poznate prije izvršavanja i koje je teško zapamtiti.
 
-Such constants are named using capital letters and underscores.
+Takve konstante nazivamo koristeći velika slova i donje crtice.
 
-For instance, let's make constants for colors in so-called "web" (hexadecimal) format:
+Na primjer, hajmo napraviti konstante za boje u "web" (heksadecimalnom) formatu:
 
 ```js run
 const COLOR_RED = "#F00";
@@ -275,69 +277,69 @@ const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";
 const COLOR_ORANGE = "#FF7F00";
 
-// ...when we need to pick a color
+// ...kada želimo odabrati boju
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 ```
 
-Benefits:
+Prednosti:
 
-- `COLOR_ORANGE` is much easier to remember than `"#FF7F00"`.
-- It is much easier to mistype `"#FF7F00"` than `COLOR_ORANGE`.
-- When reading the code, `COLOR_ORANGE` is much more meaningful than `#FF7F00`.
+- `COLOR_ORANGE` je mnogo lakše za zapamtiti nego `"#FF7F00"`.
+- Mnogo je teže napisati `"#FF7F00"` bez greške od `COLOR_ORANGE`.
+- Kada čitamo kod, `COLOR_ORANGE` je mnogo značajnije od `#FF7F00`.
 
-When should we use capitals for a constant and when should we name it normally? Let's make that clear.
+Kada trebamo koristiti velika slova za konstante a kada ćemo ih nazvati normalno? Hajmo učiniti to malo jasnije.
 
-Being a "constant" just means that a variable's value never changes. But there are constants that are known prior to execution (like a hexadecimal value for red) and there are constants that are *calculated* in run-time, during the execution, but do not change after their initial assignment.
+"Konstantna" varijabla znači da se njena vrijednost nikada ne mijenja. Ali postoje konstante koje su poznate prije izvršavanja (kao heksadecimalna vrijednost za crvenu boju) i postoje konstante koje su *izračunate* tokom izvršavanja, ali se opet ne mijenjaju nakon početne dodjele.
 
-For instance:
+Na primjer:
 ```js
-const pageLoadTime = /* time taken by a webpage to load */;
+const pageLoadTime = /* vrijeme potrebno da se stranica učita */;
 ```
 
-The value of `pageLoadTime` is not known prior to the page load, so it's named normally. But it's still a constant because it doesn't change after assignment.
+Vrijednost `pageLoadTime` nije poznata prije učitavanja stranice, tako da je ovako nazvana. Ali i dalje je konstanta jer ne mijenja vrijednost poslije inicijalne dodjele.
 
-In other words, capital-named constants are only used as aliases for "hard-coded" values.  
+U drugim riječima, konstante napisane velikim slovima se samo koriste kao nadimci za "tvrdo-kodirane" vrijednosti.
 
-## Name things right
+## Imenujte varijable ispravno
 
-Talking about variables, there's one more extremely important thing.
+Pričajući o varijablama, ima još jedna ekstremno bitna stvar.
 
-A variable name should have a clean, obvious meaning, describing the data that it stores.
+Ime varijable mora imati jasno, očigledno značenje, koje opisuje podatke koje u sebe pohranjuje.
 
-Variable naming is one of the most important and complex skills in programming. A quick glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+Imenovanje varijabli je jedna od najvažnijih i najkompleksnijih vještina u programiranju. Brz pogled na nečija imena varijabli može otkriti da li je taj kod pisan od strane početnika ili iskusnog programera.
 
-In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. When we return to some code after doing something else for a while, it's much easier to find information that is well-labeled. Or, in other words, when the variables have good names.
+U pravom projektu, većina vremena je potrošena na modificiranje i proširivanje već postojeće baze koda a ne pisanja nečega totalno odvojenog od početka. Kada se vratimo na kod nakon nekog vremena, puno je lakše naći informacije koje su dobro imenovane. Ili, u drugim riječima, kada varijable imaju jasna imena.
 
-Please spend time thinking about the right name for a variable before declaring it. Doing so will repay you handsomely.
+Molimo vas, provedite vremena razmišljajući o dobrom imenu za varijablu prije nego što je deklarišete. Radeći to, isplatit će vam se kasnije.
 
-Some good-to-follow rules are:
+Neka dobra pravila za pratiti su:
 
-- Use human-readable names like `userName` or `shoppingCart`.
-- Stay away from abbreviations or short names like `a`, `b`, `c`, unless you really know what you're doing.
-- Make names maximally descriptive and concise. Examples of bad names are `data` and `value`. Such names say nothing. It's only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
-- Agree on terms within your team and in your own mind. If a site visitor is called a "user" then we should name related variables `currentUser` or `newUser` instead of `currentVisitor` or `newManInTown`.
+- Koristite imena koja ljudi mogu pročitati kao što su `userName` ili `shoppingCart`.
+- Nemojte koristiti skraćenice ili kratka imena kao `a`, `b` ili `c`, osim ako znate sto posto šta radite.
+- Nek vam imena budu maksimalno detaljna, ali i sažeta. Primjeri loših imena su `data` i `value`. Takva imena ne govore ništa. Okej ih je samo koristiti u kontekstu kada je izuzetno očigledno na šta se varijabla odnosi.
+- Prihvatite uslove unutar vašeg tima. Ako je posjetilac stranice "user" onda trebamo nazvati srodne varijable `currentUser` ili `newUser` umjesto `currentVisitor` ili `newManInTown`.
 
-Sounds simple? Indeed it is, but creating descriptive and concise variable names in practice is not. Go for it.
+Zvuči jednostavno? Itekako jeste, ali kreiranje deskriptivnih i sažetih imena za varijable u praksi nije. Probaj sam.
 
-```smart header="Reuse or create?"
-And the last note. There are some lazy programmers who, instead of declaring new variables, tend to reuse existing ones.
+```smart header="Ponovo upotrebi ili napravi?"
+I zadnja napomena. Postoje lijeni programeri koji, umjesto da deklarišu novu varijablu, skloni su tome da ponovo upotrebe već postojeće.
 
-As a result, their variables are like boxes into which people throw different things without changing their stickers. What's inside the box now? Who knows? We need to come closer and check.
+Kao rezultat, njihove varijable su kao kutije u koje ljudi bacaju različite stvari bez mijenjanja naljepnice. Šta je sada u kutiji? Ko zna? Moramo doći bliže i provjeriti.
 
-Such programmers save a little bit on variable declaration but lose ten times more on debugging.
+Takvi programeri na početku uštede malo na vremenu ali izgube deset puta više na ispravljanju grešaka (eng. debugging).
 
-An extra variable is good, not evil.
+Dodatna varijabla je dobra, a ne zla.
 
-Modern JavaScript minifiers and browsers optimize code well enough, so it won't create performance issues. Using different variables for different values can even help the engine optimize your code.
+Moderni JavaScript minifieri i pretraživači optimiziraju kod dovoljno dobro, tako da neće izazvati probleme u performansama. Korištenje različitih varijabli za različite vrijednosti čak može pomoći motoru da optimizira vaš kod.
 ```
 
-## Summary
+## Sažetak
 
-We can declare variables to store data by using the `var`, `let`, or `const` keywords.
+Možemo deklarisati varijable da pohranjuju podatke koristeći `var`, `let`, ili `const` ključne riječi.
 
-- `let` -- is a modern variable declaration.
-- `var` -- is an old-school variable declaration. Normally we don't use it at all, but we'll cover subtle differences from `let` in the chapter <info:var>, just in case you need them.
-- `const` -- is like `let`, but the value of the variable can't be changed.
+- `let` -- je moderna deklaracija varijable.
+- `var` -- je stara deklaracija varijable. Obično je uopšte ne koristimo, ali ćemo spomenuti male razlike između `let` i var u poglavlju <info:var>, za svaki slučaj.
+- `const` -- je kao `let`, ali se vrijednost varijable ne može mijenjati.
 
-Variables should be named in a way that allows us to easily understand what's inside them.
+Varijable trebaju biti imenovane na način koji nam omogućava da lagano shvatimo sta je unutar njih.
