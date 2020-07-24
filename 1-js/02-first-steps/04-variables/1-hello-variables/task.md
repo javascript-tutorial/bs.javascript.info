@@ -1,10 +1,10 @@
-importance: 2
+važnost: 2
 
 ---
 
-# Working with variables
+#  Rad sa varijablama
 
-1. Declare two variables: `admin` and `name`.
-2. Assign the value `"John"` to `name`.
-3. Copy the value from `name` to `admin`.
-4. Show the value of `admin` using `alert` (must output "John").
+1. Proglasite dvije varijable: `admin` i `name`.
+2. Dodijelite vrijednost `"John"` varijabli `name`.
+3. Kopirajte vrijednost iz `name` u `admin`.
+4. Prikažite vrijednost `admin` koristeći `alert` (treba prikazati "John").
