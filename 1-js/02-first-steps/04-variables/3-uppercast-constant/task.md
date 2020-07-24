@@ -1,24 +1,24 @@
-importance: 4
+važnost: 4
 
 ---
 
-# Uppercase const?
+# Pisanje const velikim slovima?
 
-Examine the following code:
+Proučite sljedeći kod:
 
 ```js
-const birthday = '18.04.1982';
+const rođendan = '18.04.1982';
 
-const age = someCode(birthday);
+const godine = nekiKod(rođendan);
 ```
 
-Here we have a constant `birthday` date and the `age` is calculated from `birthday` with the help of some code (it is not provided for shortness, and because details don't matter here).
+Ovdje imamo konstantu `rođendan` i `godine` koje su izračunate sa `rođendan` uz pomoć nekog koda (kod nije napisan radi kratkoće, i jer detalji ovdje nisu toliko bitni).
 
-Would it be right to use upper case for `birthday`? For `age`? Or even for both?
+Da li bi bilo ispravno da se koriste velika slova za `rođendan`? Za `godine`? Ili za oboje?
 
 ```js
-const BIRTHDAY = '18.04.1982'; // make uppercase?
+const ROĐENDAN = '18.04.1982'; // napisati velikim?
 
-const AGE = someCode(BIRTHDAY); // make uppercase?
+const GODINE = nekiKod(ROĐENDAN); // napisati velikim?
 ```
 
