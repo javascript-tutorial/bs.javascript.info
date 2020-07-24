@@ -1,93 +1,93 @@
-# Data types
+# Tipovi podataka
 
-A value in JavaScript is always of a certain type. For example, a string or a number.
+Vrijednost u JavaScript-u uvijek ima određen tip. Na primjer, tekst (eng. string) ili broj (eng. number).
 
-There are eight basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
+Postoji osam osnovnih tipova podataka u JavaScript-u. Ovdje ćemo ih spomenuti površno a u sljedećim poglavljima ćemo učiti detaljno o svakom pojedinačno.
 
-We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
+Možemo staviti svaki tip u varijablu. Na primjer, varijabla može u jednom momentu biti tekst pa se u nju može pohraniti broj:
 
 ```js
-// no error
+// ovdje nema greške
 let message = "hello";
 message = 123456;
 ```
 
-Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning that there exist data types, but variables are not bound to any of them.
+Programski jezici koji dozvoljavaju ove stvari, kao JavaScript, se nazivaju "dinamički pisani" (eng. dynamically typed), što žnači da postoje tipovi podataka, ali varijable nisu povezane ni za jedan tip.
 
-## Number
+## Broj
 
 ```js
 let n = 123;
 n = 12.345;
 ```
 
-The *number* type represents both integer and floating point numbers.
+ Broj tj. *number* tip reprezentira oboje, i cijele brojeve i brojeve sa decimalnim zarezom.
 
-There are many operations for numbers, e.g. multiplication `*`, division `/`, addition `+`, subtraction `-`, and so on.
+Postoji mnogo operacija za brojeve, na primjer množenje (eng. multiplication) `*`, dijeljenje (eng. division) `/`,  sabiranje (eng. addition) `+`, oduzimanje (eng. subtraction) `-`, itd.
 
-Besides regular numbers, there are so-called "special numeric values" which also belong to this data type: `Infinity`, `-Infinity` and `NaN`.
+Pored običnih brojeva, postoje takozvane "specialne numeričke vrijednosti" (eng. special numeric values) koje isto tako pripadaju ovom tipu podataka: `Infinity`, `-Infinity` and `NaN`.
 
-- `Infinity` represents the mathematical [Infinity](https://en.wikipedia.org/wiki/Infinity) ∞. It is a special value that's greater than any number.
+- `Infinity` reprezentira matematičku [beskonačnost](https://en.wikipedia.org/wiki/Infinity) ∞. To je specialna vrijednost koja je veća od svakog broja.
 
-    We can get it as a result of division by zero:
+    Možemo je dobiti ako neki broj podijelimo sa nulom:
 
     ```js run
     alert( 1 / 0 ); // Infinity
     ```
 
-    Or just reference it directly:
+    Ili ako je referenciramo direktno:
 
     ```js run
     alert( Infinity ); // Infinity
     ```
-- `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+- `NaN` (eng. not a number) reprezentira grešku u računanju. To je rezultat nepravilne ili neodređene matematičke operacije, na primjer:
 
     ```js run
-    alert( "not a number" / 2 ); // NaN, such division is erroneous
+    alert( "not a number" / 2 ); // NaN, ovakva podjela je nepravilna
     ```
 
-    `NaN` is sticky. Any further operation on `NaN` returns `NaN`:
+    `NaN` je ljepljiv. Bilo koje dodatne operacije na `NaN` vraćaju `NaN`:
 
     ```js run
     alert( "not a number" / 2 + 5 ); // NaN
     ```
 
-    So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result.
+    Tako da, ako je negdje `NaN` u matematičkom izrazu, širi se na čitav rezultat.
 
-```smart header="Mathematical operations are safe"
-Doing maths is "safe" in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+```smart header="Matematičke operacije su sigurne"
+Raditi matematiku u JavaScript-u je "sigurno". Možemo uraditi bilo šta: podijeliti sa nulom, ophoditi se sa ne numeričkim tekstom kao brojem, itd.
 
-The script will never stop with a fatal error ("die"). At worst, we'll get `NaN` as the result.
+Skripta se nikada neće zaustaviti sa fatalnom greškom ("die"). U najgorem slučaju, dobit ćemo `NaN` kao rezultat.
 ```
 
-Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
+Specijalne numeričke vrijednosti formalno pripadaju "number" tipu. Naravno, nisu brojevi u zdravom smislu ove riječi.
 
-We'll see more about working with numbers in the chapter <info:number>.
+Naučit ćemo više o brojevima i kako raditi sa njima u poglavlju <info:number>.
 
-## BigInt
+## BigInt (veliki cijeli broj)
 
-In JavaScript, the "number" type cannot represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(2<sup>53</sup>-1)</code> for negatives. It's a technical limitation caused by their internal representation.
+U JavaScript-u, "number" tip ne može reprezentirati vrijednost cijelih brojeva večih od <code>(2<sup>53</sup>-1)</code> (to je `9007199254740991`), ili manjih od <code>-(2<sup>53</sup>-1)</code> za negativne brojeve. To je tehničko ograničenje izazvano od unutrašnje reprezentacije.
 
-For most purposes that's quite enough, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
+Za većinu namjena to je dovoljno, ali nekada nam trebaju veoma veliki brojevi, na primjer za kriptografiju ili vremenske oznake precizne u mikrosekundu.
 
-`BigInt` type was recently added to the language to represent integers of arbitrary length.
+`BigInt` tip je nedavno dodan u jezik da reprezentira cijele brojeve proizvoljne dužine.
 
-A `BigInt` value is created by appending `n` to the end of an integer:
+`BigInt` vrijednost je napravljena dodavanjem nastavka `n` na kraj cijelog broja:
 
 ```js
-// the "n" at the end means it's a BigInt
+// "n" na kraju znači da je u pitanju BigInt
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
 
-As `BigInt` numbers are rarely needed, we don't cover them here, but devoted them a separate chapter <info:bigint>. Read it when you need such big numbers.
+Jer `BigInt` brojevi su rijetko potrebni, nećemo ovdje ići u detalje, ali imamo odvojeno poglavlje gdje možete naučiti više o njima <info:bigint>. Pročitajte to ako i kad radili sa velikim brojevima.
 
-```smart header="Compatability issues"
-Right now `BigInt` is supported in Firefox/Chrome/Edge, but not in Safari/IE.
+```smart header="Problemi kompatibilnosti"
+Trenutno `BigInt` je podržan u Firefox-u/Chrome-u/Edge-u, ali nije u Safari-u/Internet Explorer-u.
 ```
 
-## String
+## String (tekst)
 
-A string in JavaScript must be surrounded by quotes.
+Tekst u JavaScript-u mora biti okružen navodnicima.
 
 ```js
 let str = "Hello";
@@ -95,129 +95,129 @@ let str2 = 'Single quotes are ok too';
 let phrase = `can embed another ${str}`;
 ```
 
-In JavaScript, there are 3 types of quotes.
+U JavaScript-u, postoje 3 tipa navodnika.
 
-1. Double quotes: `"Hello"`.
-2. Single quotes: `'Hello'`.
-3. Backticks: <code>&#96;Hello&#96;</code>.
+1. Dvostruki navodnici (eng. double quotes): `"Hello"`.
+2. Jednostruki navodnici (eng. single quotes): `'Hello'`.
+3. Backtick-ovi (eng. backticks) : <code>&#96;Hello&#96;</code>.
 
-Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
+dvostruki i jednostruki su "jednostavni" navodnici. Praktično između njih nema razlike u JavaScript-u.
 
-Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+Backtick-ovi su su navodnici koji imaju "produženu funkcionalnost". Dozvoljavaju nam da ugradimo (eng. embed) varijable i izraze u tekst tako što ih okružimo sa `${…}`, na primjer:
 
 ```js run
 let name = "John";
 
-// embed a variable
+// ugrađivanje varijable
 alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
 
-// embed an expression
-alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+// ugrađivanje izraza
+alert( `the result is *!*${1 + 2}*/!*` ); // rezultat je 3
 ```
 
-The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+Izraz između `${…}` je izračunat i rezultat postane dio teksta. Možemo staviti bilo šta unutra: varijablu `name` ili aritmetički izraz kao što je `1 + 2` ili nešto više kompleksno..
 
-Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
+Molim vas zapamtite da se ovo može raditi samo u backtick-ovima. Ostali navodnici nemaju ovu funkcionalnost ugrađivanja!
 ```js run
-alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (dvostruki navodnici ništa ne rade)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
+Naučit ćemo o tekstu više u ovom poglavlju <info:string>.
 
-```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is called "char".
+```smart header="Ne postoji *character* tip"
+U nekim jezicima, postoji specialan "character" tip za pojedinačan karakter (znak,slovo,broj). Na primjer, u C jeziku i u Javi ima, i zove se "char".
 
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
+U JavaScript-u, ne postoji takav tip. Postoji samo jedan tip: `string`. Tekst se može sastojati samo od jednog karaktera ili više njih.
 ```
 
-## Boolean (logical type)
+## Boolean (logički tip)
 
-The boolean type has only two values: `true` and `false`.
+Boolean tip ima samo dvije vrijednosti `true` i `false`.
 
-This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+Ovaj tip je često koristen da pohrani da/ne (eng. yes/no) vrijednosti: `true` znači "da, tačno", a `false` znači "ne, netačno".
 
-For instance:
+Na primjer:
 
 ```js
-let nameFieldChecked = true; // yes, name field is checked
-let ageFieldChecked = false; // no, age field is not checked
+let nameFieldChecked = true; // da, polje za ime je čekirano
+let ageFieldChecked = false; // ne, polje za godine nije čekirano
 ```
 
-Boolean values also come as a result of comparisons:
+Boolean vrijednosti isto dolaze kao rezultat poređenja:
 
 ```js run
 let isGreater = 4 > 1;
 
-alert( isGreater ); // true (the comparison result is "yes")
+alert( isGreater ); // true (rezultat poređenja je true (tačan) jer je 4 veće od 1)
 ```
 
-We'll cover booleans more deeply in the chapter <info:logical-operators>.
+Naučit ćemo o boolean tipu dublje u pogljavlju <info:logical-operators>.
 
-## The "null" value
+## "null" vrijednost
 
-The special `null` value does not belong to any of the types described above.
+Specialna `null` vrijednost ne pripada nijednom tipu napisanim iznad.
 
-It forms a separate type of its own which contains only the `null` value:
+Ono formira svoj odvojen tip koji samo sadrži `null` vrijednost:
 
 ```js
 let age = null;
 ```
 
-In JavaScript, `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+U JavaScript-u, `null` nije "referenca nekog ne postojećeg objekta" (eng. reference to a non-existing object) ili "null indikator" (eng. null pointer) kao u drugim jezicima.
 
-It's just a special value which represents "nothing", "empty" or "value unknown".
+To je samo specijalna vrijednost koja reprezentira "ništa" (eng. nothing), "prazno" (eng. empty), ili "vrijednost nepoznata" (eng. value unknown).
 
-The code above states that `age` is unknown.
+Kod iznad navodi da je `age` nepoznat.
 
-## The "undefined" value
+## "undefined" (neodređena) vrijednost
 
-The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
+Specijalna vrijednost `undefined` isto je drugačija od ostalih. Pravi svoj tip, baš kao `null`.
 
-The meaning of `undefined` is "value is not assigned".
+Značenje `undefined` jeste "vrijednost nije dodijeljena" (eng. value is not assigned).
 
-If a variable is declared, but not assigned, then its value is `undefined`:
+Ako je varijabla deklarisana, ali joj nije dodijeljena vrijednost, onda vrijednost iznosi `undefined`:
 
 ```js run
 let age;
 
-alert(age); // shows "undefined"
+alert(age); // pokazuje "undefined"
 ```
 
-Technically, it is possible to explicitly assign `undefined` to a variable:
+Tehnički, moguće je eksplicitno dodijeliti `undefined` nekoj varijabli:
 
 ```js run
 let age = 100;
 
-// change the value to undefined
+// promijeni vrijednost na undefined
 age = undefined;
 
 alert(age); // "undefined"
 ```
 
-...But we don't recommend doing that. Normally, one uses `null` to assign an "empty" or "unknown" value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
+...Ali mi ne preporučujemo da se to radi. Obično, treba se koristiti `null` ako želimo dodijeliti praznu ili nepoznatu vrijednost varijabli, jer je `undefined` rezervisan kao uobičajena inicialna vrijednost za stvari kojima nije dodijeljena vrijednost.
 
-## Objects and Symbols
+## Objekti i Simboli (eng. objects and symbols)
 
-The `object` type is special.
+`object` tip je specialan.
 
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+Svi ostali tipovi su takozvani "primitivni" (eng. primitive) jer njihove vrijednosti mogu sadržiti samo jednu stvar (ili tekst ili broj ili bilo šta drugo). U kontrastu, objekti se koriste da pohrane kolekcije podataka i više kompleksnih entiteta.
 
-Being that important, objects deserve a special treatment. We'll deal with them later in the chapter <info:object>, after we learn more about primitives.
+Pošto su tako bitni, objekti zaslužuju specijalni tretman. O njima ćemo kasnije učiti u poglavlju <info:object>, nakon što naučimo više o primitivnim vrijednostima.
 
-The `symbol` type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
+`symbol` tip se koristi da kreira unikatne identifikatore za objekte. Moramo ga spomenuti radi potpunosti, ali ćemo odgoditi detalje sve dok ne naučimo objekte.
 
-## The typeof operator [#type-typeof]
+## typeof operator [#type-typeof]
 
-The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently or just want to do a quick check.
+`typeof` operator vraća tip podatka datog argumenta. Koristan je kada želimo procesirati vrijednosti različitih tipova drugačije ili kada želimo uraditi brzu provjeru.
 
-It supports two forms of syntax:
+Podržava dvije vrste sintakse:
 
-1. As an operator: `typeof x`.
-2. As a function: `typeof(x)`.
+1. Kao operator: `typeof x`.
+2. Kao funkcija: `typeof(x)`.
 
-In other words, it works with parentheses or without them. The result is the same.
+U drugim riječima, radi sa zagradama ili bez njih. Rezultat je isti.
 
-The call to `typeof x` returns a string with the type name:
+Poziv na `typeof x` vraća tekst sa imenom tipa podatka:
 
 ```js
 typeof undefined // "undefined"
@@ -245,29 +245,29 @@ typeof alert // "function"  (3)
 */!*
 ```
 
-The last three lines may need additional explanation:
+Zadnje tri linije možda trebaju dodatno objašnjenje:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's an officially recognized error in `typeof` behavior, coming from the early days of JavaScript and kept for compatibility. Definitely, `null` is not an object. It is a special value with a separate type of its own.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
+1. `Math` je ugrađen (eng. built-in) objekat koji pruža matematičke operacije. Učit ćemo više o tome poglavlju <info:number>. Ovjde, služi samo kao primjer objekta.
+2. Rezultat `typeof null` je `"object"`. To je zvanično priznata greška u ponašasanju `typeof`, dolazi iz ranih dana JavaScript-a i zadržano je za kompatibilnost. Definitivno, `null` nije objekat. To je specijalna vrijednost sa svojim odvojenim tipom.
+3. Rezultat `typeof alert` je `"function"`, jer je `alert` funkcija. Učit ćemo o funkcijama u sljedećim poglavljima gdje ćemo vidjeti da ne postoji specijalni "function" tip u JavaScript-u. Funkcije pripadaju tipu objekat (eng. object). Ali `typeof` se ophodi drugačije, i vraća `"function"`. I ovo isto dolazi iz ranih dana JavaScript-a. Tehnički, ovakvo ponašanje nije tačno, ali može biti prikladno u praksi.
 
-## Summary
+## Sažetak
 
-There are 8 basic data types in JavaScript.
+Postoji 8 osnovnih tipova podataka u JavaScript-u.
 
-- `number` for numbers of any kind: integer or floating-point, integers are limited by ±2<sup>53</sup>.
-- `bigint` is for integer numbers of arbitrary length.
-- `string` for strings. A string may have zero or more characters, there's no separate single-character type.
-- `boolean` for `true`/`false`.
-- `null` for unknown values -- a standalone type that has a single value `null`.
-- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-- `object` for more complex data structures.
-- `symbol` for unique identifiers.
+- `number` za brojeve bilo koje vrste: cijeli broj ili broj sa decimalnim zarezom, cijeli brojevi su ograničeni do ±2<sup>53</sup>.
+- `bigint` je za cijele brojeve proizvoljne dužine.
+- `string` za tekst. String može imati nula ili više karaktera, ne postoji odvojen singl-karakter tip podatka.
+- `boolean` za `true`/`false`.
+- `null` za nepoznate vrijednosti -- samostalni tip koji ima samo jednu vrijednost `null`.
+- `undefined` za ne dodijeljene vrijednosti -- samostalni tip koji imaju samo jednu vrijednost `undefined`.
+- `object` za kompleksnije strukture podataka.
+- `symbol` za unikatne identifikatore.
 
-The `typeof` operator allows us to see which type is stored in a variable.
+`typeof` operator nam dozvoljava da vidimo koji tip podatka je pohranjen u nekoj varijabli.
 
-- Two forms: `typeof x` or `typeof(x)`.
-- Returns a string with the name of the type, like `"string"`.
-- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+- Dvije vrste: `typeof x` ili `typeof(x)`.
+- Vraća tekst sa imenom tipa podatka, na primjer `"string"`.
+- Za `null` vraća `"object"` -- ovo je greška u jeziku, nije zapravo objekat.
 
-In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
+U sljedećim poglavljima, koncetrirat ćemo se na primitivne vrijednosti i kada se upoznamo s njima, preći ćemo na objekte.
