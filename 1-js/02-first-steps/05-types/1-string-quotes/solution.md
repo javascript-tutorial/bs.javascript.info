@@ -1,5 +1,5 @@
 
-Backtick-ovi ugrade rezultat izraza unutar `${...}` u string / tekst.
+Backtick-ovi ugrade rezultat izraza unutar `${...}` u string/tekst.
 
 ```js run
 let name = "Ilya";
