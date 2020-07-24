@@ -1,5 +1,5 @@
-We generally use upper case for constants that are "hard-coded". Or, in other words, when the value is known prior to execution and directly written into the code.
+Mi obično koristimo velika slova za konstante koje su "tvrdo kodirane" (eng. hard-coded). Ili, u drugim riječima, kada je vrijednost poznata prije izvršavanja i direktno upisana u kod.
 
-In this code, `birthday` is exactly like that. So we could use the upper case for it.
+U ovom kodu, `ROĐENDAN` je tačno takav. Tako da za njega trebamo koristiti velika slova.
 
-In contrast, `age` is evaluated in run-time. Today we have one age, a year after we'll have another one. It is constant in a sense that it does not change through the code execution. But it is a bit "less of a constant" than `birthday`: it is calculated, so we should keep the lower case for it.
+U kontrastu `godine` su izračunate tokom izvršavanja koda. Danas imamo jednu vrijednost godina, sljedeću godinu imat ćemo drugačiju. Konstantna je u smislu da se ne mijenja tokom izvršavanja koda. Ali je malo "manje konstantna" od `rođendan`: izračunata je, tako da je trebamo pisati malim slovima.

@@ -1,7 +1,7 @@
-In the code below, each line corresponds to the item in the task list.
+U kodu ispod, svaka linija odgovara predmetu u listi zadataka.
 
 ```js run
-let admin, name; // can declare two variables at once
+let admin, name; // možete proglasiti dvije varijable odjednom
 
 name = "John";
 
