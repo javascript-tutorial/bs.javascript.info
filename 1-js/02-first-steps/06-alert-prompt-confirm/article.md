@@ -1,49 +1,49 @@
-# Interaction: alert, prompt, confirm
+# Interakcija: alert, prompt, confirm
 
-As we'll be using the browser as our demo environment, let's see a couple of functions to interact with the user: `alert`, `prompt` and `confirm`.
+Pošto ćemo koristiti pretraživač kao naše okruženje, pogledat ćemo nekoliko funkcija kojim možemo vršiti interakciju sa korisnicima: `alert`, `prompt` i `confirm`.
 
-## alert
+## alert (znak za uzbunu)
 
-This one we've seen already. It shows a message and waits for the user to press "OK".
+Ovaj smo već vidjeli. Pokaže poruku i čeka na korisnika da pritisne "OK".
 
-For example:
+Na primjer:
 
 ```js run
 alert("Hello");
 ```
 
-The mini-window with the message is called a *modal window*. The word "modal" means that the visitor can't interact with the rest of the page, press other buttons, etc, until they have dealt with the window. In this case -- until they press "OK".
+Mini-prozorčić se naziva *modalni prozor* (eng. modal window). Riječ "modalni" znači da posjetilac ne može djelovati na ostatak stranice, pritiskati ostale tipke, itd, dok ne ugasi ovaj prozorčić. U ovom slučaju -- dok ne pritisne "OK".
 
-## prompt
+## prompt (redak)
 
-The function `prompt` accepts two arguments:
+Funkcija `prompt` prihvata dva argumenta:
 
 ```js no-beautify
 result = prompt(title, [default]);
 ```
 
-It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.
+Prikaže modalni prozorčić sa tekstualnom porukom, polje za unos, i tipke OK/Cancel.
 
 `title`
-: The text to show the visitor.
+: Tekst prikazan posjetiocu.
 
 `default`
-: An optional second parameter, the initial value for the input field.
+: Neobavezni drugi parametar, inicijalna vrijednost za polje unosa.
 
-```smart header="The square brackets in syntax `[...]`"
-The square brackets around `default` in the syntax above denote that the parameter as optional, not required.
+```smart header="Srednje zagrade u sintaksi `[...]`"
+Srednje zagrade oko `default` u sintaksi pokazuju da je taj parametar opcionalan, nije potreban.
 ```
 
-The visitor can type something in the prompt input field and press OK. Then we get that text in the `result`. Or they can cancel the input by pressing Cancel or hitting the `key:Esc` key, then we get `null` as the `result`.
+Posjetilac može nešto u polje napisati i pritisnuti OK. Onda ćemo dobiti taj tekst kao `result`. Ili mogu prekinuti unos pritiskom na Cancel ili `key:Esc` tipku, i tada dobijamo `null` kao `rezultat`.
 
-The call to `prompt` returns the text from the input field or `null` if the input was canceled.
+Poziv na prompt vraća tekst koji je unešen u polju, ili `null` ako je unos prekinut.
 
-For instance:
+Na primjer:
 
 ```js run
 let age = prompt('How old are you?', 100);
 
-alert(`You are ${age} years old!`); // You are 100 years old!
+alert(`You are ${age} years old!`); // You are 100 years old (Imate 100 godina) !
 ```
 
 ````warn header="In IE: always supply a `default`"
