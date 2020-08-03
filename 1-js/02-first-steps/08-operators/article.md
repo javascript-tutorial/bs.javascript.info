@@ -1,15 +1,15 @@
-# Basic operators, maths
+# Osnovni operatori, matematika
 
-We know many operators from school. They are things like addition `+`, multiplication `*`, subtraction `-`, and so on.
+Mi znamo mnoge operatore iz škole. To su stvari kao što su sabiranje `+`, množenje `*`, oduzimanje `-`, i tako dalje.
 
-In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.
+U ovom poglavlju, započet ćemo sa jednostavnim operatorima, pa ćemo se onda koncentrisati na one JavaScript specifične aspekte, koji nisu spomenuti u školi.
 
-## Terms: "unary", "binary", "operand"
+## Pojmovi: "unary", "binary", "operand"
 
-Before we move on, let's grasp some common terminology.
+Prije nego što krenemo, trebamo shvatiti opštu terminologiju.
 
-- *An operand* -- is what operators are applied to. For instance, in the multiplication of `5 * 2` there are two operands: the left operand is `5` and the right operand is `2`. Sometimes, people call these "arguments" instead of "operands".
-- An operator is *unary* if it has a single operand. For example, the unary negation `-` reverses the sign of a number:
+- *Operand* -- je ono na šta se operatori primjenjuju. Na primjer, u množenju `5 * 2` imamo dva operanda: lijevi operand je `5` a desni je `2`. Ponekad, ljudi ih nazivaju "argument" umjesto "operand".
+- Operator je *unary* (matematička operacija koja uključuje samo jedan element) ako ima samo jedan operand. Na primjer, unary negacija `-` mijenja predznak broja:
 
     ```js run
     let x = 1;
@@ -17,114 +17,114 @@ Before we move on, let's grasp some common terminology.
     *!*
     x = -x;
     */!*
-    alert( x ); // -1, unary negation was applied
+    alert( x ); // -1, unary negacija je primjenjena
     ```
-- An operator is *binary* if it has two operands. The same minus exists in binary form as well:
+- Operator je *binary* (binarni, uključuje dva elementa) ako ima dva operanda. Isti minus postoji u binarnoj formi:
 
     ```js run no-beautify
     let x = 1, y = 3;
-    alert( y - x ); // 2, binary minus subtracts values
+    alert( y - x ); // 2, binarni minus oduzima vrijednosti
     ```
 
-    Formally, in the examples above we have two different operators that share the same symbol: the negation operator, a unary operator that reverses the sign, and the subtraction operator, a binary operator that subtracts one number from another.
+    Formalno rečeno, u primjerima iznad imamo dva različita operatora koji dijele isti simbol: operator negacije, unary operator koji mijenja predznak, i operator oduzimanja, binarni operator koji oduzima jedan broj od drugog.
 
-## Maths
+## Matematika
 
-The following math operations are supported:
+Sljedeće matematičke operacije su podržane:
 
-- Addition `+`,
-- Subtraction `-`,
-- Multiplication `*`,
-- Division `/`,
-- Remainder `%`,
-- Exponentiation `**`.
+- Sabiranje `+`,
+- Oduzimanje `-`,
+- Množenje `*`,
+- Dijeljenje `/`,
+- Ostatak `%`,
+- Eksponencija `**`.
 
-The first four are straightforward, while `%` and `**` need a few words about them.
+Prva četiri su jednostavna, dok o `%` i `**` trebamo nešto reći.
 
-### Remainder %
+### Ostatak %
 
-The remainder operator `%`, despite its appearance, is not related to percents.
+Operator za ostatak `%`,  uprkos svom izgledu, nije povezan sa postotcima.
 
-The result of `a % b` is the [remainder](https://en.wikipedia.org/wiki/Remainder) of the integer division of `a` by `b`.
+Rezultat `a % b` je [ostatak](https://en.wikipedia.org/wiki/Remainder) prilikom cjelobrojne podjele `a` sa `b`.
 
-For instance:
-
-```js run
-alert( 5 % 2 ); // 1, a remainder of 5 divided by 2
-alert( 8 % 3 ); // 2, a remainder of 8 divided by 3
-```
-
-### Exponentiation **
-
-The exponentiation operator `a ** b` multiplies `a` by itself `b` times.
-
-For instance:
+Na primjer:
 
 ```js run
-alert( 2 ** 2 ); // 4  (2 multiplied by itself 2 times)
-alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 times)
-alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 times)
+alert( 5 % 2 ); // 1, ostatak prilikom dijeljenja 5 sa 2
+alert( 8 % 3 ); // 2, ostatak prilikom dijeljenja 8 sa 3
 ```
 
-Mathematically, the exponentiation is defined for non-integer numbers as well. For example, a square root is an exponentiation by `1/2`:
+###  Eksponencija **
+
+Operator eksponencije `a ** b` množi `a` sa sobom `b` puta.
+
+Na primjer:
 
 ```js run
-alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
-alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+alert( 2 ** 2 ); // 4  (2 pomnoženo sa sobom 2 puta)
+alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 puta)
+alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 puta)
+```
+
+Matematički, eksponencija je određena i za ne-cijele brojeve. Na primjer, korijen je eksponencija od `1/2`:
+
+```js run
+alert( 4 ** (1/2) ); // 2 (stepen od 1/2 je isti kao i kvadratni korijen)
+alert( 8 ** (1/3) ); // 2 (stepen od 1/3 je isti kao kubični korijen)
 ```
 
 
-## String concatenation with binary +
+##  Spajanje stringova sa binarnim +
 
-Let's meet features of JavaScript operators that are beyond school arithmetics.
+Upoznajmo se sa mogućnostima JavaScript operatora koji su izvan školske aritmetike.
 
-Usually, the plus operator `+` sums numbers.
+Obično, plus operator `+` sabira brojeve.
 
-But, if the binary `+` is applied to strings, it merges (concatenates) them:
+Ali, ako se binarni `+` primijeni na string-ove, spaja ih:
 
 ```js
 let s = "my" + "string";
 alert(s); // mystring
 ```
 
-Note that if any of the operands is a string, then the other one is converted to a string too.
+Zapamtite da ako je bilo koji operand string, onda će se drugi također pretvoriti u string.
 
-For example:
+Na primjer:
 
 ```js run
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 ```
 
-See, it doesn't matter whether the first operand is a string or the second one.
+Vidite, nije bitno da je li prvi ili drugi operand string.
 
-Here's a more complex example:
-
-```js run
-alert(2 + 2 + '1' ); // "41" and not "221"
-```
-
-Here, operators work one after another. The first `+` sums two numbers, so it returns `4`, then the next `+` adds the string `1` to it, so it's like `4 + '1' = 41`.
-
-The binary `+` is the only operator that supports strings in such a way. Other arithmetic operators work only with numbers and always convert their operands to numbers.
-
-Here's the demo for subtraction and division:
+Evo jedan kompleksniji primjer:
 
 ```js run
-alert( 6 - '2' ); // 4, converts '2' to a number
-alert( '6' / '2' ); // 3, converts both operands to numbers
+alert(2 + 2 + '1' ); // "41" a ne "221"
 ```
 
-## Numeric conversion, unary +
+Ovdje, operatori rade jedan poslije drugog. Prvi `+` sabira dva broja, tako da vraća `4`, onda sljedeći `+` dodaje string `1`, tako da bude `4 + '1' = 41`.
 
-The plus `+` exists in two forms: the binary form that we used above and the unary form.
+Binarni `+` je jedini operator koji podržava string-ove na ovaj način. Ostali aritmetički operatori rade samo sa brojevima i uvijek pretvaraju operand-e u brojeve.
 
-The unary plus or, in other words, the plus operator `+` applied to a single value, doesn't do anything to numbers. But if the operand is not a number, the unary plus converts it into a number.
+Evo šta se desi ako oduzimamo i dijelimo:
+
+```js run
+alert( 6 - '2' ); // 4, pretvara '2' u broj
+alert( '6' / '2' ); // 3, pretvara oba operand-a u brojeve
+```
+
+## Numerična konverzija, unary +
+
+`+` postoji u dvije forme: binarna forma koju smo koristili iznad i unary forma.
+
+Unary plus, ili u drugim riječima, plus operator `+` koji je primijenjen na samo jednu vrijednost, ne radi ništa brojevimna. Ali ako operand nije broj, unary plus ga pretvara u broj.
 
 For example:
 
 ```js run
-// No effect on numbers
+// Nema uticaj na brojeve
 let x = 1;
 alert( +x ); // 1
 
@@ -132,55 +132,55 @@ let y = -2;
 alert( +y ); // -2
 
 *!*
-// Converts non-numbers
+// Pretvara vrijednosti koje nisu brojevi
 alert( +true ); // 1
 alert( +"" );   // 0
 */!*
 ```
 
-It actually does the same thing as `Number(...)`, but is shorter.
+Radi istu stvar kao `Number(...)`, ali je kraće.
 
-The need to convert strings to numbers arises very often. For example, if we are getting values from HTML form fields, they are usually strings. What if we want to sum them?
+Potreba za pretvaranje string-ova u brojeve se javlja veoma često. Na primjer, ako dobijamo vrijednosti iz HTML polja za unos, one su obično string-ovi. Šta ako želimo da ih saberemo?
 
-The binary plus would add them as strings:
+Binarni plus će ih dodati kao string-ove:
 
 ```js run
 let apples = "2";
 let oranges = "3";
 
-alert( apples + oranges ); // "23", the binary plus concatenates strings
+alert( apples + oranges ); // "23", binarni plus spaja string-ove
 ```
 
-If we want to treat them as numbers, we need to convert and then sum them:
+Ako ih želimo tretirati kao brojeve, moramo ih pretvoriti i sabrati:
 
 ```js run
 let apples = "2";
 let oranges = "3";
 
 *!*
-// both values converted to numbers before the binary plus
+// obe vrijednosti su pretvorene u brojeve prije binarnog plusa
 alert( +apples + +oranges ); // 5
 */!*
 
-// the longer variant
+// duža varijanta
 // alert( Number(apples) + Number(oranges) ); // 5
 ```
 
-From a mathematician's standpoint, the abundance of pluses may seem strange. But from a programmer's standpoint, there's nothing special: unary pluses are applied first, they convert strings to numbers, and then the binary plus sums them up.
+Sa stanovišta matematičara, obilje pluseva možda zvuči čudno. Ali sa stanovišta programera, to nije ništa specijalno: unary plusevi se prvo primijenjuju, oni pretvaraju string-ove u brojeve, pa ih tek onda binarni plus sabira.
 
-Why are unary pluses applied to values before the binary ones? As we're going to see, that's because of their *higher precedence*.
+Zašto su unary plusevi primijenjeni na vrijednosti prije binarnih? To ćemo naučiti ubrzo, razlog toga jeste njihov *veći prioritet*.
 
-## Operator precedence
+## Prioritet operatora
 
-If an expression has more than one operator, the execution order is defined by their *precedence*, or, in other words, the default priority order of operators.
+Ako izraz ima više od jednog operatora, onda je red izvršavanja određen njihovim *prioritetima*, ili, u drugim riječima, uobičajenim redom prioriteta operatora.
 
-From school, we all know that the multiplication in the expression `1 + 2 * 2` should be calculated before the addition. That's exactly the precedence thing. The multiplication is said to have *a higher precedence* than the addition.
+Iz škole, svi znamo da množenje u izrazu `1 + 2 * 2` treba biti izračunato prije sabiranja. To je tačno ova stvar o prioritetima. Množenje ima *veći prioritet* od sabiranja.
 
-Parentheses override any precedence, so if we're not satisfied with the default order, we can use them to change it. For example, write `(1 + 2) * 2`.
+Zagrade nadjačavaju prioritete, tako da ako nismo zadovoljni sa uobičajenim redom, možemo koristiti iste da promijenimo red. Na primjer, napišite `(1 + 2) * 2`.
 
-There are many operators in JavaScript. Every operator has a corresponding precedence number. The one with the larger number executes first. If the precedence is the same, the execution order is from left to right.
+Postoji mnogo operatora u JavaScript-u. Svaki operator ima određeni nivo prioriteta. Onaj sa većim nivoom se prvi izvršava. Ako je prioritet isti, red izvršavanja je od lijeve ka desnoj strani.
 
-Here's an extract from the [precedence table](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+Evo ekstrakta iz [tabele prioriteta](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (ne trebate ovo zapamtiti, ali zapamtite samo da su unary operatori veći od odgovarajućeg binarnog):
 
 | Precedence | Name | Sign |
 |------------|------|------|
