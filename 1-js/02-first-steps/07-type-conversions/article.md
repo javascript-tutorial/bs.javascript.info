@@ -1,102 +1,102 @@
-# Type Conversions
+# Pretvaranje tipova podataka
 
-Most of the time, operators and functions automatically convert the values given to them to the right type.
+Većinom vremena, operatori i funkcije automatski pretvaraju vrijednosti koje su im date u ispravan tip podatka.
 
-For example, `alert` automatically converts any value to a string to show it. Mathematical operations convert values to numbers.
+Na primjer, `alert` automatski pretvara bilo koju vrijednost u string da je prikaže. Matematičke operacije pretvaraju vrijednosti u brojeve.
 
-There are also cases when we need to explicitly convert a value to the expected type.
+Postoje slučajevi kada trebamo eksplicitno pretvoriti vrijednost u očekivani tip podatka.
 
-```smart header="Not talking about objects yet"
-In this chapter, we won't cover objects. For now we'll just be talking about primitives.
+```smart header="Ne pričamo još o objektima"
+U ovom poglavlju, nećemo preći objekte. Za sada pričamo samo o primitivnim vrijednostima i tipovima.
 
-Later, after we learn about objects, in the chapter <info:object-toprimitive> we'll see how objects fit in.
+Kasnije, kada naučimo o objektima, u poglavlju <info:object-toprimitive> pogledat ćemo kako se objekti uklapaju.
 ```
 
-## String Conversion
+## Pretvaranje u string
 
-String conversion happens when we need the string form of a value.
+Pretvaranje u string se vrši kada nam treba string oblik vrijednosti.
 
-For example, `alert(value)` does it to show the value.
+Na primjer, `alert(value)` to radi da pokaže vrijednost.
 
-We can also call the `String(value)` function to convert a value to a string:
+Možemo isto pozvati `String(value)` funkciju da pretvorimo vrijednost u string:
 
 ```js run
 let value = true;
 alert(typeof value); // boolean
 
 *!*
-value = String(value); // now value is a string "true"
+value = String(value); // sada vrijednost je string "true"
 alert(typeof value); // string
 */!*
 ```
 
-String conversion is mostly obvious. A `false` becomes `"false"`, `null` becomes `"null"`, etc.
+Pretvaranje u string je većinom očigledno. `false` postaje `"false"`, `null` postaje `"null"`, itd.
 
-## Numeric Conversion
+## Pretvaranje u brojeve
 
-Numeric conversion happens in mathematical functions and expressions automatically.
+Pretvaranje u brojeve se u matematičkim funkcijama i izrazima vrši automatski.
 
-For example, when division `/` is applied to non-numbers:
+Na primjer, kada primjenjujemo dijeljenje `/` na vrijednostima koje nisu brojevi:
 
 ```js run
-alert( "6" / "2" ); // 3, strings are converted to numbers
+alert( "6" / "2" ); // 3, string-ovi su pretvoreni u brojeve
 ```
 
-We can use the `Number(value)` function to explicitly convert a `value` to a number:
+Možemo koristiti `Number(value)` funkciju da eksplicitno pretvorimo `value` u broj:
 
 ```js run
 let str = "123";
 alert(typeof str); // string
 
-let num = Number(str); // becomes a number 123
+let num = Number(str); // postane broj 123
 
 alert(typeof num); // number
 ```
 
-Explicit conversion is usually required when we read a value from a string-based source like a text form but expect a number to be entered.
+Eksplicitna konverzija je obično potrebna kada čitamo vrijednost iz nekog izvora kao što je tekst form-e ali očekujemo broj da bude unesen.
 
-If the string is not a valid number, the result of such a conversion is `NaN`. For instance:
+Ako string nije validan broj, rezultat takve konverzije će biti `NaN`. Na primjer:
 
 ```js run
 let age = Number("an arbitrary string instead of a number");
 
-alert(age); // NaN, conversion failed
+alert(age); // NaN, konverzija nije bila uspješna
 ```
 
-Numeric conversion rules:
+Pravila prilikom pretvaranja u brojeve:
 
-| Value |  Becomes... |
+| Vrijednost |  Postane... |
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
-|<code>true&nbsp;and&nbsp;false</code> | `1` and `0` |
-| `string` | Whitespaces from the start and end are removed. If the remaining string is empty, the result is `0`. Otherwise, the number is "read" from the string. An error gives `NaN`. |
+|<code>true&nbsp;i&nbsp;false</code> | `1` i `0` |
+| `string` | Razmaci sa početka i kraja će biti izbrisani. Ako je preostali string prazan, rezultat je `0`. U suprotnom, broj je "očitan" iz string-a. Greška prilikom konverzije će dati `NaN`. |
 
-Examples:
+Primjer:
 
 ```js run
 alert( Number("   123   ") ); // 123
-alert( Number("123z") );      // NaN (error reading a number at "z")
+alert( Number("123z") );      // NaN (greška prilikom čitanja broja na "z")
 alert( Number(true) );        // 1
 alert( Number(false) );       // 0
 ```
 
-Please note that `null` and `undefined` behave differently here: `null` becomes zero while `undefined` becomes `NaN`.
+Upamtite da se `null` i `undefined` ponašaju različito ovdje: `null` postaje nula dok `undefined` postaje `NaN`.
 
-Most mathematical operators also perform such conversion, we'll see that in the next chapter.
+Većina matematičkih operatora isto vrše ovakve konverzije, a o tome ćemo pričati u sljedećem poglavlju.
 
-## Boolean Conversion
+## Pretvaranje u Boolean
 
-Boolean conversion is the simplest one.
+Boolean konverzija je najjednostavnija.
 
-It happens in logical operations (later we'll meet condition tests and other similar things) but can also be performed explicitly with a call to `Boolean(value)`.
+Javlja se u logičkim operacijama (kasnije ćemo se upoznati sa kondicionalnim testovima i sličnim stvarima) ali se isto može izvršiti eksplicitno ako pozovemo funkciju `Boolean(value)`.
 
-The conversion rule:
+Pravila tokom konverzije:
 
-- Values that are intuitively "empty", like `0`, an empty string, `null`, `undefined`, and `NaN`, become `false`.
-- Other values become `true`.
+- Vrijednosti koje su intuitivno "prazne", kao `0`, prazan string, `null`, `undefined`, i `NaN`, postaju `false`.
+- Ostale vrijednosti postaju `true`.
 
-For instance:
+Na primjer:
 
 ```js run
 alert( Boolean(1) ); // true
@@ -106,45 +106,45 @@ alert( Boolean("hello") ); // true
 alert( Boolean("") ); // false
 ```
 
-````warn header="Please note: the string with zero `\"0\"` is `true`"
-Some languages (namely PHP) treat `"0"` as `false`. But in JavaScript, a non-empty string is always `true`.
+````warn header="Zapamtite: string sa nulom `\"0\"` je `true`"
+Neki jezici (kao što je PHP) tretiraju `"0"` kao `false`. Ali u JavaScript-u, string koji nije prazan je uvijek `true`.
 
 ```js run
 alert( Boolean("0") ); // true
-alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
+alert( Boolean(" ") ); // razmaci, isto true (bilo koji string koji nije prazan je true)
 ```
 ````
 
-## Summary
+## Sažetak
 
-The three most widely used type conversions are to string, to number, and to boolean.
+Tri najčešće korištene konverzije su u string, broj ili boolean.
 
-**`String Conversion`** -- Occurs when we output something. Can be performed with `String(value)`. The conversion to string is usually obvious for primitive values.
+**`Pretvaranje u string`** -- Javlja se kada nešto prikazujemo kao izlaz. Konverzija može biti izvršena sa `String(value)`. Konverzija u string je obično očigledna za primitivne vrijednosti.
 
-**`Numeric Conversion`** -- Occurs in math operations. Can be performed with `Number(value)`.
+**`Pretvaranje u brojeve`** -- Javlja se u matematičkim operacijama. Konverzija može biti izvršena sa `Number(value)`.
 
-The conversion follows the rules:
+Pravila konverzije:
 
-| Value |  Becomes... |
+| Vrijednost |  Postaje... |
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;/&nbsp;false</code> | `1 / 0` |
-| `string` | The string is read "as is", whitespaces from both sides are ignored. An empty string becomes `0`. An error gives `NaN`. |
+| `string` | String je pročitan "kakav jeste", razmaci sa obe strane su ignorisani. Prazan string je `0`. Greška prilikom konverzije daje `NaN`. |
 
-**`Boolean Conversion`** -- Occurs in logical operations. Can be performed with `Boolean(value)`.
+**`Pretvaranje u boolean`** -- Javlja se u logičkim operacijama. Konverzija može biti izvršena sa `Boolean(value)`.
 
-Follows the rules:
+Prati sljedeća pravila:
 
-| Value |  Becomes... |
+| Vrijednost |  Postaje... |
 |-------|-------------|
 |`0`, `null`, `undefined`, `NaN`, `""` |`false`|
-|any other value| `true` |
+|bilo koja druga vrijednost| `true` |
 
 
-Most of these rules are easy to understand and memorize. The notable exceptions where people usually make mistakes are:
+Većina ovih pravila su lagana za shvatiti i zapamtiti. Izuzeci gdje ljudi često prave greške su:
 
-- `undefined` is `NaN` as a number, not `0`.
-- `"0"` and space-only strings like `"   "` are true as a boolean.
+- `undefined` je `NaN` kao broj, ne `0`.
+- `"0"` i stringovi koji imaju samo razmak `"   "` su true kao boolean.
 
-Objects aren't covered here. We'll return to them later in the chapter <info:object-toprimitive> that is devoted exclusively to objects after we learn more basic things about JavaScript.
+Objekti nisu spomenuti ovdje. Doći ćemo do njih u poglavlju <info:object-toprimitive> koji je posvećen ekskluzivno objektima, ali do njih ćemo doći tek kada naučimo još neke osnovne stvari o JavaScript-u.
