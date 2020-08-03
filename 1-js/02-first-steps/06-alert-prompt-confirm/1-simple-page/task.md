@@ -1,9 +1,9 @@
-importance: 4
+važnost: 4
 
 ---
 
-# A simple page
+# Jednostavna stranica
 
-Create a web-page that asks for a name and outputs it.
+Napravi stranicu koja traži ime i na kraju ga prikazuje.
 
 [demo]

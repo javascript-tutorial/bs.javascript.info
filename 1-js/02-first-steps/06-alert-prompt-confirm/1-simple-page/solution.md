@@ -1,11 +1,11 @@
-JavaScript-code:
+JavaScript kod:
 
 ```js demo run
 let name = prompt("What is your name?", "");
 alert(name);
 ```
 
-The full page:
+Cijela stranica:
 
 ```html
 <!DOCTYPE html>
