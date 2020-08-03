@@ -46,60 +46,60 @@ let age = prompt('How old are you?', 100);
 alert(`You are ${age} years old!`); // You are 100 years old (Imate 100 godina) !
 ```
 
-````warn header="In IE: always supply a `default`"
-The second parameter is optional, but if we don't supply it, Internet Explorer will insert the text `"undefined"` into the prompt.
+````warn header="U Internet Explorer-u: Uvijek postavite `default` (tj. uobičajenu vrijednost)"
+Drugi parametar je opcionalan, ali ako ga ne postavimo, Internet Explorer će ubaciti teksst `"undefined"` u prompt.
 
-Run this code in Internet Explorer to see:
+Pokrenite ovaj kod u Internet Explorer-u da vidite:
 
 ```js run
 let test = prompt("Test");
 ```
 
-So, for prompts to look good in IE, we recommend always providing the second argument:
+Tako da prompt-ovi izgledaju dobro u IE, mi preporučujemo da uvijek unesete drugi argument:
 
 ```js run
-let test = prompt("Test", ''); // <-- for IE
+let test = prompt("Test", ''); // <-- za IE
 ```
 ````
 
-## confirm
+## confirm (potvrditi)
 
-The syntax:
+Sintaksa:
 
 ```js
 result = confirm(question);
 ```
 
-The function `confirm` shows a modal window with a `question` and two buttons: OK and Cancel.
+Funkcija `confirm` pokazuje modalni prozorčić sa `question` (eng. pitanje) i dvije tipke: OK i Cancel (eng. otkazati).
 
-The result is `true` if OK is pressed and `false` otherwise.
+Rezultat je `true` ako je pritisnuta tipka OK a `false` u suprotnom.
 
-For example:
+Na primjer:
 
 ```js run
 let isBoss = confirm("Are you the boss?");
 
-alert( isBoss ); // true if OK is pressed
+alert( isBoss ); // true ako je OK pritisnuto
 ```
 
-## Summary
+## Sažetak
 
-We covered 3 browser-specific functions to interact with visitors:
+Spomenuli smo 3 funkcije specifične za pretraživače sa kojima možemo vršiti interakciju sa korisnicima:
 
 `alert`
-: shows a message.
+: prikazuje poruku.
 
 `prompt`
-: shows a message asking the user to input text. It returns the text or, if Cancel button or `key:Esc` is clicked, `null`.
+: prikazuje poruku i pita korisnika da unese tekst. Vraća tekst ili, ako je pritisnuta tipka Cancel ili `key:Esc`, vraća `null`.
 
 `confirm`
-: shows a message and waits for the user to press "OK" or "Cancel". It returns `true` for OK and `false` for Cancel/`key:Esc`.
+: prikazuje poruku i čeka na korisnika da pritisne "OK" ili "Cancel". Vraća `true` za OK a `false` za Cancel/`key:Esc`.
 
-All these methods are modal: they pause script execution and don't allow the visitor to interact with the rest of the page until the window has been dismissed.
+Sve ove metode (eng. methods) su modalne: zaustave izvršavanje skripte i ne dozvoljavaju posjetiocu da ima interakciju sa ostatkom stranice dok se prozor ne zatvori.
 
-There are two limitations shared by all the methods above:
+Postoje dva ograničenja za svaku metodu koju smo naveli:
 
-1. The exact location of the modal window is determined by the browser. Usually, it's in the center.
-2. The exact look of the window also depends on the browser. We can't modify it.
+1. Egzaktna lokacija modalnog prozorčića je određena od strane pretraživača. Najčešće je u sredini.
+2. Egzaktni izgled prozorčića isto zavisi od pretraživača. Ne možemo izgled mijenjati.
 
-That is the price for simplicity. There are other ways to show nicer windows and richer interaction with the visitor, but if "bells and whistles" do not matter much, these methods work just fine.
+To je cijena koju plaćamo za jednostavnost. Postoje drugi načini da pokažemo prozorčiće sa boljim izgledom i interakcijom sa posjetiocima, ali ako nam ti faktori nisu bitni, ove metode rade sasvim u redu.
