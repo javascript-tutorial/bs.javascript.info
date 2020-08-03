@@ -121,7 +121,7 @@ alert( '6' / '2' ); // 3, pretvara oba operand-a u brojeve
 
 Unary plus, ili u drugim riječima, plus operator `+` koji je primijenjen na samo jednu vrijednost, ne radi ništa brojevimna. Ali ako operand nije broj, unary plus ga pretvara u broj.
 
-For example:
+Na primjer:
 
 ```js run
 // Nema uticaj na brojeve
