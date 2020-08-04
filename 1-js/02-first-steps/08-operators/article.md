@@ -182,27 +182,27 @@ Postoji mnogo operatora u JavaScript-u. Svaki operator ima određeni nivo priori
 
 Evo ekstrakta iz [tabele prioriteta](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (ne trebate ovo zapamtiti, ali zapamtite samo da su unary operatori veći od odgovarajućeg binarnog):
 
-| Precedence | Name | Sign |
+| Prioritet | Ime | Znak |
 |------------|------|------|
 | ... | ... | ... |
 | 17 | unary plus | `+` |
-| 17 | unary negation | `-` |
-| 16 | exponentiation | `**` |
-| 15 | multiplication | `*` |
-| 15 | division | `/` |
-| 13 | addition | `+` |
-| 13 | subtraction | `-` |
+| 17 | unary negacija | `-` |
+| 16 | eksponencija | `**` |
+| 15 | množenje | `*` |
+| 15 | dijeljenje | `/` |
+| 13 | sabiranje | `+` |
+| 13 | oduzimanje | `-` |
 | ... | ... | ... |
-| 3 | assignment | `=` |
+| 3 | dodjela | `=` |
 | ... | ... | ... |
 
-As we can see, the "unary plus" has a priority of `17` which is higher than the `13` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+Kao što možemo da vidimo, "unary plus" ima prioritet `17` koji je veći od `13` prioriteta "sabiranja" (binarni plus). Zato, u izrazu `"+apples + +oranges"`, unary plus se prije sabiranja izvršava.
 
-## Assignment
+## Dodjela
 
-Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `3`.
-
-That's why, when we assign a variable, like `x = 2 * 2 + 1`, the calculations are done first and then the `=` is evaluated, storing the result in `x`.
+Zapamtite da je dodjela `=` isto operator. Na listi prioriteta ima mali prioritet `3`.
+ 
+Zato, kada dodijelimo vrijednost varijabli, `x = 2 * 2 + 1`,  kalkulacije su izvršene prvo pa je `=` evaluiran, pohranjujući rezultat u varijablu `x`.
 
 ```js
 let x = 2 * 2 + 1;
@@ -210,15 +210,15 @@ let x = 2 * 2 + 1;
 alert( x ); // 5
 ```
 
-### Assignment = returns a value
+### Dodjela = vraća vrijednost
 
-The fact of `=` being an operator, not a "magical" language construct has an interesting implication.
+Činjenica da je `=` operator, a ne "magični" jezički konstrukt ima interesantnu implikaciju.
 
-Most operators in JavaScript return a value. That's obvious for `+` and `-`, but also true for `=`.
+Većina operatora u JavaScript-u vraćaju vrijednost. To je očigledno za `+` i `-`, ali to isto vrijedi za `=`.
 
-The call `x = value` writes the `value` into `x` *and then returns it*.
+Poziv `x = value` piše `value` u `x` *pa je vraća*.
 
-Here's a demo that uses an assignment as part of a more complex expression:
+Evo primjera gdje se koristi operator dodjele kao dio složenog izraza:
 
 ```js run
 let a = 1;
@@ -232,15 +232,15 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
-In the example above, the result of expression `(a = b + 1)` is the value which was assigned to `a` (that is `3`). It is then used for further evaluations.
+U primjeru iznad, rezultat izraza `(a = b + 1)` je vrijednost koja je dodijeljena `a` (to je `3`).
 
-Funny code, isn't it? We should understand how it works, because sometimes we see it in JavaScript libraries.
+Smiješan kod, zar ne? Trebamo shvatiti kako radi, jer ga ponekad vidimo u JavaScript bibliotekama (eng. libraries).
 
-Although, please don't write the code like that. Such tricks definitely don't make code clearer or readable.
+Uprkos tome, ne pišite kod na taj način. Takvi trikovi sigurno ne čine da kod bude jasniji ili čitljiviji.
 
-### Chaining assignments
+### Lančanje dodjela
 
-Another interesting feature is the ability to chain assignments:
+Još jedna interesantna mogućnost jeste sposobnost da lančamo dodjele (eng. chain assignments):
 
 ```js run
 let a, b, c;
@@ -254,20 +254,20 @@ alert( b ); // 4
 alert( c ); // 4
 ```
 
-Chained assignments evaluate from right to left. First, the rightmost expression `2 + 2` is evaluated and then assigned to the variables on the left: `c`, `b` and `a`. At the end, all the variables share a single value.
+Lančane dodjele se evaluiraju s desna na lijevo. Prvo, najdesniji izraz `2 + 2` je evaluiran pa je dodijeljen varijablama na lijevoj strani: `c`, `b` i `a`. Na kraju, sve varijable dijele istu vrijednost.
 
-Once again, for the purposes of readability it's better to split such code into few lines:
+Još jednom, kako bi naš kod bio čitljiviji, bolje ga je podijeliti u nekoliko linija:
 
 ```js
 c = 2 + 2;
 b = c;
 a = c;
 ```
-That's easier to read, especially when eye-scanning the code fast.
+Ovo je lakše za čitati, posebno kada brzo pregledavamo kod.
 
-## Modify-in-place
+## Modificiranje u mjestu (eng. modify-in-place)
 
-We often need to apply an operator to a variable and store the new result in that same variable.
+Mi često trebamo primijeniti operator na nekoj varijabli i pohraniti novi rezultat u istoj varijabli.
 
 For example:
 
@@ -277,67 +277,67 @@ n = n + 5;
 n = n * 2;
 ```
 
-This notation can be shortened using the operators `+=` and `*=`:
+Ova notacija može biti skraćena koristeći operatore `+=` i `*=`:
 
 ```js run
 let n = 2;
-n += 5; // now n = 7 (same as n = n + 5)
-n *= 2; // now n = 14 (same as n = n * 2)
+n += 5; // sada n = 7 (isto kao n = n + 5)
+n *= 2; // now n = 14 (isto kao n = n * 2)
 
 alert( n ); // 14
 ```
 
-Short "modify-and-assign" operators exist for all arithmetical and bitwise operators: `/=`, `-=`, etc.
+Kratki "modificiraj-i-dodijeli" operatori postoje za sve aritmetičke i bitwise operatore: `/=`, `-=`, itd.
 
-Such operators have the same precedence as a normal assignment, so they run after most other calculations:
+Takvi operatori imaju isti prioritet kao i prilikom normalnog dodijeljivanja, tako da su oni izvršeni poslije većine drugih kalkulacija:
 
 ```js run
 let n = 2;
 
 n *= 3 + 5;
 
-alert( n ); // 16  (right part evaluated first, same as n *= 8)
+alert( n ); // 16  (desni dio je prvi evaluiran, isto kao n *= 8)
 ```
 
-## Increment/decrement
+## Povećavanje/smanjivanje (eng. increment/decrement)
 
 <!-- Can't use -- in title, because the built-in parser turns it into a 'long dash' – -->
 
-Increasing or decreasing a number by one is among the most common numerical operations.
+Povećavanje ili smanjivanje broja za jedan je skoro najčešća numerička operacija.
 
-So, there are special operators for it:
+Postoje specijalni operatori za ovu svrhu:
 
-- **Increment** `++` increases a variable by 1:
+- **Povećavanje** `++` povećava varijablu za 1:
 
     ```js run no-beautify
     let counter = 2;
-    counter++;        // works the same as counter = counter + 1, but is shorter
+    counter++;        // radi isto kao counter = counter + 1, ali je kraće
     alert( counter ); // 3
     ```
-- **Decrement** `--` decreases a variable by 1:
+- **Smanjivanje** `--` smanjuje varijablu za 1:
 
     ```js run no-beautify
     let counter = 2;
-    counter--;        // works the same as counter = counter - 1, but is shorter
+    counter--;        // radi isto kao counter = counter - 1, ali je kraće
     alert( counter ); // 1
     ```
 
 ```warn
-Increment/decrement can only be applied to variables. Trying to use it on a value like `5++` will give an error.
+Povećavanje/smanjivanje se može primijeniti samo na varijablama. Ako ih pokušamo koristiti na nekoj vrijednosti kao što je `5++` dobit ćemo grešku.
 ```
 
-The operators `++` and `--` can be placed either before or after a variable.
+Operatori `++` i `--` mogu biti postavljeni ili prije ili poslije varijable.
 
-- When the operator goes after the variable, it is in "postfix form": `counter++`.
-- The "prefix form" is when the operator goes before the variable: `++counter`.
+- Kada se operator nalazi iza varijable, nalazi se u tzv. "postfix formi": `counter++`.
+- "Prefix forma" je kada se operator nalazi ispred varijable: `++counter`.
 
-Both of these statements do the same thing: increase `counter` by `1`.
+Obe ove izjave rade istu stvar: povećavaju `counter` za `1`.
 
-Is there any difference? Yes, but we can only see it if we use the returned value of `++/--`.
+Ima li razlike? Da, ali možemo je samo vidjeti ako koristimo vraćenu vrijednost od `++/--`.
 
-Let's clarify. As we know, all operators return a value. Increment/decrement is no exception. The prefix form returns the new value while the postfix form returns the old value (prior to increment/decrement).
+Hajmo razjasniti. Kao što znamo, svi operatori vraćaju vrijednost. Povećavanje/smanjivanje nije izuzetak. Prefix forma vraća novu vrijednost dok postfix forma vraća staru vrijednost (prije povećavanja ili smanjivanja).
 
-To see the difference, here's an example:
+Da vidimo razliku, evo primjera:
 
 ```js run
 let counter = 1;
@@ -346,44 +346,44 @@ let a = ++counter; // (*)
 alert(a); // *!*2*/!*
 ```
 
-In the line `(*)`, the *prefix* form `++counter` increments `counter` and returns the new value, `2`. So, the `alert` shows `2`.
+Na liniji `(*)`, *prefix* forma `++counter` povećava `counter` i vraća novu vrijednost, `2`. Tako da `alert` prikazuje `2`.
 
-Now, let's use the postfix form:
+Sada, hajmo koristiti postfix formu:
 
 ```js run
 let counter = 1;
-let a = counter++; // (*) changed ++counter to counter++
+let a = counter++; // (*) promijenjeno sa ++counter na counter++
 
 alert(a); // *!*1*/!*
 ```
 
-In the line `(*)`, the *postfix* form `counter++` also increments `counter` but returns the *old* value (prior to increment). So, the `alert` shows `1`.
+Na liniji `(*)`, postfix forma `counter++` isto povećava `counter` ali vraća *staru* vrijednost (prije povećavanja). Tako da `alert` prikazuje `1`.
 
-To summarize:
+Da rezimiramo:
 
-- If the result of increment/decrement is not used, there is no difference in which form to use:
+- Ako rezultat povećavanja/smanjivanja nije korišten, nema razlike u tome koju formu koristite:
 
     ```js run
     let counter = 0;
     counter++;
     ++counter;
-    alert( counter ); // 2, the lines above did the same
+    alert( counter ); // 2, linije iznad su uradile isto
     ```
-- If we'd like to increase a value *and* immediately use the result of the operator, we need the prefix form:
+- Ako želimo povećati vrijednost *i* odmah koristiti rezultat operatora, treba nam prefix forma:
 
     ```js run
     let counter = 0;
     alert( ++counter ); // 1
     ```
-- If we'd like to increment a value but use its previous value, we need the postfix form:
+- Ako želimo povećati vrijednost ali koristiti prethodnu, treba nam postfix forma:
 
     ```js run
     let counter = 0;
     alert( counter++ ); // 0
     ```
 
-````smart header="Increment/decrement among other operators"
-The operators `++/--` can be used inside expressions as well. Their precedence is higher than most other arithmetical operations.
+````smart header="Povećavanje/smanjivanje među drugim operatorima"
+Operatori `++/--` se mogu koristiti unutar izraza. Njihov prioritet je veći od većine drugih aritmetičkih operacija.
 
 For instance:
 
@@ -392,18 +392,18 @@ let counter = 1;
 alert( 2 * ++counter ); // 4
 ```
 
-Compare with:
+Poredite sa:
 
 ```js run
 let counter = 1;
-alert( 2 * counter++ ); // 2, because counter++ returns the "old" value
+alert( 2 * counter++ ); // 2, jer counter++ vraća "staru" vrijednost
 ```
 
-Though technically okay, such notation usually makes code less readable. One line does multiple things -- not good.
+Iako je tehnički ispravno, takva notacija čini kod manje čitljivijim. Jedna linija radi više stvari -- to nije u redu.
 
-While reading code, a fast "vertical" eye-scan can easily miss something like `counter++` and it won't be obvious that the variable increased.
+Kada čitamo kod, brzim "vertikalnim" prelazom preko istog možemo lagano izostaviti nešto kao `counter++` i neće biti očigledno da je varijabla povećana.
 
-We advise a style of "one line -- one action":
+Mi preporučujemo stil "jedna linija -- jedna akcija":
 
 ```js run
 let counter = 1;
@@ -412,13 +412,13 @@ counter++;
 ```
 ````
 
-## Bitwise operators
+## Bitwise operatori
 
-Bitwise operators treat arguments as 32-bit integer numbers and work on the level of their binary representation.
+Bitwise operatori tretiraju argumente kao 32-bitne cijele brojeve i rade na nivou njihove binarne reprezentacije.
 
-These operators are not JavaScript-specific. They are supported in most programming languages.
+Ovi operatori nisu specifični za JavaScript. Oni su podržani u većini drugih programskih jezika.
 
-The list of operators:
+Lista operatora:
 
 - AND ( `&` )
 - OR ( `|` )
@@ -428,13 +428,13 @@ The list of operators:
 - RIGHT SHIFT ( `>>` )
 - ZERO-FILL RIGHT SHIFT ( `>>>` )
 
-These operators are used very rarely, when we need to fiddle with numbers on the very lowest (bitwise) level. We won't need these operators any time soon, as web development has little use of them, but in some special areas, such as cryptography, they are useful. You can read the [Bitwise Operators](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) article on MDN when a need arises.
+Ovi operatori se veoma rijetko koriste, kada trebamo da radimo sa brojevima na veoma niskom (bitwise) nivou. Ovi operatori nam neće trebati u bližoj budućnosti, jer u web programiranju imaju malu upotrebu, ali u nekim specijalnim oblastima kao što su kriptografija, su korisni. Možete pročitati [Bitwise Operatori](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) poglavlje na MDN kada vam zatreba.
 
-## Comma
+## Zarez (eng. comma)
 
-The comma operator `,` is one of the rarest and most unusual operators. Sometimes, it's used to write shorter code, so we need to know it in order to understand what's going on.
+Zarez operator `,` je jedan od najrjeđih i najneobičnijih operatora. Ponekad se koristi da pišemo kraći kod, tako da ga trebamo naučiti da znamo šta on zapravo radi.
 
-The comma operator allows us to evaluate several expressions, dividing them with a comma `,`. Each of them is evaluated but only the result of the last one is returned.
+Zarez operator nam omogućava da evaluiramo više izraza, odvajajući ih zarezima `,`. Svaki od ovih izraza je evaluiran ali je vraćen samo rezultat posljednjeg.
 
 For example:
 
@@ -446,25 +446,25 @@ let a = (1 + 2, 3 + 4);
 alert( a ); // 7 (the result of 3 + 4)
 ```
 
-Here, the first expression `1 + 2` is evaluated and its result is thrown away. Then, `3 + 4` is evaluated and returned as the result.
+Ovdje, prvi izraz `1 + 2` je evaluiran i njegov rezultat je bačen. Onda, `3 + 4` je evaluiran i vraćen je rezultat.
 
-```smart header="Comma has a very low precedence"
-Please note that the comma operator has very low precedence, lower than `=`, so parentheses are important in the example above.
+```smart header="Zarez ima veoma nizak prioritet"
+Zapamtite da zarez operator ima veoma nizak prioritet, čak i manji od `=`, tako da su zagrade bitne u primjeru iznad.
 
-Without them: `a = 1 + 2, 3 + 4` evaluates `+` first, summing the numbers into `a = 3, 7`, then the assignment operator `=` assigns `a = 3`, and the rest is ignored. It's like `(a = 1 + 2), 3 + 4`.
+Bez njih: `a = 1 + 2, 3 + 4` evaluira `+` prvo, sabira brojeve pa dobijemo `a = 3, 7`, pa onda operator dodjele `=` dodijeli `a = 3`, a ostatak je ignorisan. Isto je kao `(a = 1 + 2), 3 + 4`.
 ```
 
-Why do we need an operator that throws away everything except the last expression?
+Zašto nam onda treba operator koji baci sve osim zadnjeg izraza?
 
-Sometimes, people use it in more complex constructs to put several actions in one line.
+Ponekad, ljudi ga koriste u složenijim konstruktima kako bi stavili više akcija u jednu liniju.
 
-For example:
+Na primjer:
 
 ```js
-// three operations in one line
+// tri operacije u jednoj liniji
 for (*!*a = 1, b = 3, c = a * b*/!*; a < 10; a++) {
  ...
 }
 ```
 
-Such tricks are used in many JavaScript frameworks. That's why we're mentioning them. But usually they don't improve code readability so we should think well before using them.
+Takvi trikovi se koriste u mnogo JavaScript framework-a. Zato ih spominjemo. Ali obično ne poboljšavaju čitljivost koda tako da trebamo dobro razmisliti prije nego što ih upotrijebimo.
