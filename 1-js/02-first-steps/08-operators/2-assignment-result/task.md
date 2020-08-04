@@ -1,10 +1,10 @@
-importance: 3
+važnost: 3
 
 ---
 
-# Assignment result
+# Rezultat dodjele
 
-What are the values of `a` and `x` after the code below?
+Koje su vrijednosti varijabli `a` i `x` poslije koda ispod?
 
 ```js
 let a = 2;

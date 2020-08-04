@@ -1,6 +1,6 @@
-The reason is that prompt returns user input as a string.
+Razlog je zato što prompt vraća unos korisnika kao string.
 
-So variables have values `"1"` and `"2"` respectively.
+Tako da varijable imaju vrijednosti `"1"` i `"2"` respketivno.
 
 ```js run
 let a = "1"; // prompt("First number?", 1);
@@ -9,9 +9,9 @@ let b = "2"; // prompt("Second number?", 2);
 alert(a + b); // 12
 ```
 
-What we should to is to convert strings to numbers before `+`. For example, using `Number()` or prepending them with `+`.
+Ono šta mi trebamo uraditi jeste pretvoriti string-ove u brojeve prije `+`. Na primjer, koristeći `Number()` ili dodavajući `+` ispred njih.
 
-For example, right before `prompt`:
+Na primjer, prije `prompt`:
 
 ```js run
 let a = +prompt("First number?", 1);
@@ -20,7 +20,7 @@ let b = +prompt("Second number?", 2);
 alert(a + b); // 3
 ```
 
-Or in the `alert`:
+Ili u `alert`:
 
 ```js run
 let a = prompt("First number?", 1);
@@ -29,4 +29,4 @@ let b = prompt("Second number?", 2);
 alert(+a + +b); // 3
 ```
 
-Using both unary and binary `+` in the latest code. Looks funny, doesn't it?
+Koristimo i unary i binarne `+` u zadnjem kodu. Izgleda smiješno, zar ne?

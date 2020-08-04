@@ -1,10 +1,10 @@
-importance: 5
+važnost: 5
 
 ---
 
-# Type conversions
+# Konverzije tipova podataka
 
-What are results of these expressions?
+Koji su rezultati ovih izraza?
 
 ```js no-beautify
 "" + 1 + 0
@@ -24,4 +24,4 @@ undefined + 1
 " \t \n" - 2
 ```
 
-Think well, write down and then compare with the answer.
+Razmisli dobro, napiši i poredi sa odgovorom.
