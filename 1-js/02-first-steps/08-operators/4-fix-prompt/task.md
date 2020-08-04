@@ -1,14 +1,14 @@
-importance: 5
+važnost: 5
 
 ---
 
-# Fix the addition
+# Popravi sabiranje
 
-Here's a code that asks the user for two numbers and shows their sum.
+Ovdje imamo kod koji pita korisnika za dva broja i prikazuje njihov zbir.
 
-It works incorrectly. The output in the example below is `12` (for default prompt values).
+Ne radi ispravno. Izlaz u primjeru ispod je `12` (za uobičajene prompt vrijednosti).
 
-Why? Fix it. The result should be `3`.
+Zašto? Popravi. Rezultat treba biti `3`.
 
 ```js run
 let a = prompt("First number?", 1);
