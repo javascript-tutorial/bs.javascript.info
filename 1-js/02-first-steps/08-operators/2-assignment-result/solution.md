@@ -1,5 +1,5 @@
-The answer is:
+Odgovor je:
 
-- `a = 4` (multiplied by 2)
-- `x = 5` (calculated as 1 + 4)
+- `a = 4` (pomnoženo sa 2)
+- `x = 5` (izračunato kao 1 + 4)
 
