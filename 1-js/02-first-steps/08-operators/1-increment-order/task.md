@@ -1,10 +1,10 @@
-importance: 5
+važnost: 5
 
 ---
 
-# The postfix and prefix forms
+# Postfix i prefix forme
 
-What are the final values of all variables `a`, `b`, `c` and `d` after the code below?
+Koje su finalne vrijednost varijabli `a`, `b`, `c` i `d` poslije koda ispod?
 
 ```js
 let a = 1, b = 1;
