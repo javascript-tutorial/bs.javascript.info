@@ -107,10 +107,18 @@ Moderne alatke čine prevođenje veoma brzim i transparentnim, i zapravo dopušt
 
 Primjeri takvih jezika:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) je "sintaktički šećer" za JavaScript. Uvodi kraću sintaksu, što nam dopušta da pišemo jasniji i precizniji kod. Obično, Ruby programeri ga vole.
 - [TypeScript](http://www.typescriptlang.org/) je koncentrisan na dodavanje "strogog tipkanja podataka" (eng. strict data typing) da bi olakšao razvoj i podršku složenih sistema. Razvijen je od strane Microsoft-a.
 - [Flow](http://flow.org/) isto dodaje strogo tipkanje podataka, ali na drugi način. Razvijen je od strane Facebook-a.
 - [Dart](https://www.dartlang.org/) je samostalni jezik koji ima svoj motor koji se pokreće izvan pretraživačkih okruženja (kao npr. u mobilnim aplikacijama), ali isto može biti preveden u JavaScript. Razvijen od strane Google-a.
+=======
+- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that allow to write application in pure Python without JavaScript.
+>>>>>>> f830bc5d9454d85829e011d914f215eb5896579a
 
 Postoji ih više. Naravno, čak i ako koristimo jedan od ovih prevedenih jezika, moramo dobro znati JavaScript kako bismo stvarno shvatili šta se događa i odvija.
 
