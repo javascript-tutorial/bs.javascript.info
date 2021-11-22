@@ -9,7 +9,11 @@ Prvo, hajmo vidjeti kako povezati skriptu sa web stranicom. Za okruženja sa ser
 
 ## "script" oznaka (eng. tag)
 
+<<<<<<< HEAD
 JavaScript programi mogu biti ubačeni u bilo koji dio HTML dokumenta uz pomoć `<script>` oznake.
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Kao na primjer:
 
@@ -73,7 +77,11 @@ Skript datoteke su povezane sa HTMLom preko `src` atributa:
 <script src="/put/do/script.js"></script>
 ```
 
+<<<<<<< HEAD
 Ovdje, `/put/do/script.js` je apsolutan put do skripte od korijena stranice. Možete pružiti relativni put od trenutne stranice. Na primjer, `src="script.js"` bi značilo `"script.js"` je u trenutnom folderu.
+=======
+Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Možemo dati i potpuni URL također. Na primjer:
 
