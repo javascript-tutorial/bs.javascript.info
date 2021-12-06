@@ -64,7 +64,11 @@ Specijalne numeričke vrijednosti formalno pripadaju "number" tipu. Naravno, nis
 
 Naučit ćemo više o brojevima i kako raditi sa njima u poglavlju <info:number>.
 
+<<<<<<< HEAD
 ## BigInt (veliki cijeli broj)
+=======
+## BigInt [#bigint-type]
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 U JavaScript-u, "number" tip ne može reprezentirati vrijednost cijelih brojeva večih od <code>(2<sup>53</sup>-1)</code> (to je `9007199254740991`), ili manjih od <code>-(2<sup>53</sup>-1)</code> za negativne brojeve. To je tehničko ograničenje izazvano od unutrašnje reprezentacije.
 
@@ -81,11 +85,22 @@ const bigInt = 1234567890123456789012345678901234567890n;
 
 Jer `BigInt` brojevi su rijetko potrebni, nećemo ovdje ići u detalje, ali imamo odvojeno poglavlje gdje možete naučiti više o njima <info:bigint>. Pročitajte to ako i kad radili sa velikim brojevima.
 
+<<<<<<< HEAD
 ```smart header="Problemi kompatibilnosti"
 Trenutno `BigInt` je podržan u Firefox-u/Chrome-u/Edge-u, ali nije u Safari-u/Internet Explorer-u.
 ```
 
 ## String (tekst)
+=======
+
+```smart header="Compatibility issues"
+Right now, `BigInt` is supported in Firefox/Chrome/Edge/Safari, but not in IE.
+```
+
+You can check [*MDN* BigInt compatibility table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) to know which versions of a browser are supported.
+
+## String
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Tekst u JavaScript-u mora biti okružen navodnicima.
 
@@ -127,7 +142,11 @@ Naučit ćemo o tekstu više u ovom poglavlju <info:string>.
 ```smart header="Ne postoji *character* tip"
 U nekim jezicima, postoji specialan "character" tip za pojedinačan karakter (znak,slovo,broj). Na primjer, u C jeziku i u Javi ima, i zove se "char".
 
+<<<<<<< HEAD
 U JavaScript-u, ne postoji takav tip. Postoji samo jedan tip: `string`. Tekst se može sastojati samo od jednog karaktera ili više njih.
+=======
+In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 ```
 
 ## Boolean (logički tip)
@@ -255,6 +274,7 @@ Zadnje tri linije možda trebaju dodatno objašnjenje:
 
 Postoji 8 osnovnih tipova podataka u JavaScript-u.
 
+<<<<<<< HEAD
 - `number` za brojeve bilo koje vrste: cijeli broj ili broj sa decimalnim zarezom, cijeli brojevi su ograničeni do ±2<sup>53</sup>.
 - `bigint` je za cijele brojeve proizvoljne dužine.
 - `string` za tekst. String može imati nula ili više karaktera, ne postoji odvojen singl-karakter tip podatka.
@@ -263,6 +283,16 @@ Postoji 8 osnovnih tipova podataka u JavaScript-u.
 - `undefined` za ne dodijeljene vrijednosti -- samostalni tip koji imaju samo jednu vrijednost `undefined`.
 - `object` za kompleksnije strukture podataka.
 - `symbol` za unikatne identifikatore.
+=======
+- `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
+- `bigint` is for integer numbers of arbitrary length.
+- `string` for strings. A string may have zero or more characters, there's no separate single-character type.
+- `boolean` for `true`/`false`.
+- `null` for unknown values -- a standalone type that has a single value `null`.
+- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
+- `object` for more complex data structures.
+- `symbol` for unique identifiers.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 `typeof` operator nam dozvoljava da vidimo koji tip podatka je pohranjen u nekoj varijabli.
 
