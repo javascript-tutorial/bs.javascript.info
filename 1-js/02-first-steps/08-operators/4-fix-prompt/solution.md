@@ -9,7 +9,11 @@ let b = "2"; // prompt("Second number?", 2);
 alert(a + b); // 12
 ```
 
+<<<<<<< HEAD
 Ono šta mi trebamo uraditi jeste pretvoriti string-ove u brojeve prije `+`. Na primjer, koristeći `Number()` ili dodavajući `+` ispred njih.
+=======
+What we should do is to convert strings to numbers before `+`. For example, using `Number()` or prepending them with `+`.
+>>>>>>> a6fdfda09570a8ce47bb0b83cd7a32a33869cfad
 
 Na primjer, prije `prompt`:
 
