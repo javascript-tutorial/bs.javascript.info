@@ -24,7 +24,11 @@ Sada, možemo staviti podatke u nju putem operatora dodjele `=`:
 let poruka;
 
 *!*
+<<<<<<< HEAD
 poruka = 'Hello'; // store the string
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> 741d90ce8a730d66e987bff5e9794d6e41cb2f05
 */!*
 ```
 
