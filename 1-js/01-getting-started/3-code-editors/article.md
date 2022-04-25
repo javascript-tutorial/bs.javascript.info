@@ -31,11 +31,18 @@ U praksi, lagani editori većinom imaju dosta više plugin-ova (dodataka) uklju�
 
 Sljedeće opcije zaslužuju vašu pažnju:
 
+<<<<<<< HEAD
 - [Atom](https://atom.io/) (cross-platform, besplatan).
 - [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, besplatan).
 - [Sublime Text](http://www.sublimetext.com) (cross-platform, besplatan određeno vrijeme).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, besplatan).
 - [Vim](http://www.vim.org/) i [Emacs](https://www.gnu.org/software/emacs/) su isto zanimljivi ako ih znate koristiti.
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 291b5c05b99452cf8a0d32bd32426926dbcc0ce0
 
 ## Nemojmo se prepirati
 
