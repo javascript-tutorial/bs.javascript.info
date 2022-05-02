@@ -13,20 +13,32 @@ Nova verzija specifikacije izlazi svake godine. Između ovih izdanja, najnoviji 
 
 Da pročitate najnovije karakteristike, uključujući one koje su skoro postale "standard" (takozvana "faza 3"), pogledajte prijedloge na ovom linku <https://github.com/tc39/proposals>.
 
+<<<<<<< HEAD
 Isto tako, ako programirate u pretraživaču, postoje druge specifikacije koje su spomenute u [drugom dijelu](info:browser-environment) tutorijala.
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> 291b5c05b99452cf8a0d32bd32426926dbcc0ce0
 
 ## Priručnici
 
+<<<<<<< HEAD
 - **MDN (Mozilla) JavaScript Referenca** je priručnik sa primjerima i ostalim informacijama. Odličan je izvor gdje možete naći dubinske informacije o individualnim funkcijama jezika, metodama, itd.
+=======
+- **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+>>>>>>> 291b5c05b99452cf8a0d32bd32426926dbcc0ce0
 
     Možete naći na ovom linku <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
 
+<<<<<<< HEAD
      Mada često je najbolje koristiti pretrage na internetu. Samo napišite "MDN [pojam]" u pretragu, na primjer <https://google.com/search?q=MDN+parseInt> da pretražite internet za `parseInt` funkciju.
 
 
 - **MSDN** – Microsoft priručnik sa mnoštvo informacija, uključujući JavaScript (često se na stranici naziva JScript). Ako neko želi nešto specifično za Internet Explorer, najbolje je otići ovdje: <http://msdn.microsoft.com/>.
 
     Isto tako, možemo koristiti pretrage sa frazama kao što su "RegExp MSDN" ili "RegExp MSDN jscript".
+=======
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+>>>>>>> 291b5c05b99452cf8a0d32bd32426926dbcc0ce0
 
 ## Tablice kompatibilinosti
 
