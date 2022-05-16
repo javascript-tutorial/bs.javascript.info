@@ -24,7 +24,11 @@ Sada, možemo staviti podatke u nju putem operatora dodjele `=`:
 let poruka;
 
 *!*
+<<<<<<< HEAD
 poruka = 'Hello'; // store the string
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 */!*
 ```
 
@@ -191,8 +195,13 @@ let 1a; // ne smije započeti sa brojem
 let my-name; // crtica nije dozvoljena u imenu
 ```
 
+<<<<<<< HEAD
 ```smart header="Velika i mala slova su bitna"
 Varijable nazvane `jabuka` i `jabuKA` su dvije različite varijable.
+=======
+```smart header="Case matters"
+Variables named `apple` and `APPLE` are two different variables.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 ```
 
 ````smart header="Ne latinska slova su dozvoljena, ali nije preporučeno"
@@ -299,7 +308,11 @@ const pageLoadTime = /* vrijeme potrebno da se stranica učita */;
 
 Vrijednost `pageLoadTime` nije poznata prije učitavanja stranice, tako da je ovako nazvana. Ali i dalje je konstanta jer ne mijenja vrijednost poslije inicijalne dodjele.
 
+<<<<<<< HEAD
 U drugim riječima, konstante napisane velikim slovima se samo koriste kao nadimci za "tvrdo-kodirane" vrijednosti.
+=======
+In other words, capital-named constants are only used as aliases for "hard-coded" values.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 
 ## Imenujte varijable ispravno
 

@@ -46,7 +46,11 @@ alert(3 +
 + 2);
 ```
 
+<<<<<<< HEAD
 Kod će ispisati `6` jer JavaScript ne ubacuje tačku-zarez ovdje. Ovdje je intuitivno očigledno da ako linija završi sa plus znakom `"+"`, onda je to nepotpun izraz, tako da tačka-zarez znak nije potreban. I u ovom slučaju radi kao i što je predviđeno.
+=======
+The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so a semicolon there would be incorrect. And in this case, that works as intended.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 
 **Ali postoje situacije kada JavaScript "ne uspije" da pretpostavi gdje treba biti tačka-zarez.
 
@@ -56,28 +60,43 @@ Greške koje se javljaju u ovim slučajevima su malo teže za pronaći i popravi
 Ako te zanima konkretan primjer ovakve greške, pogledaj ovaj kod:
 
 ```js run
-[1, 2].forEach(alert)
+alert("Hello");
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 Ne trebate znati značenje ovih zagrada `[]` i `forEach` još. Kasnije ćemo ih naučiti. Za sada, zapamti rezultat koda: pokaže `1` pa onda `2`.
 
 Sada, hajmo dodati `alert` prije koda i *ne* završiti ga sa tačkom-zarez.
 
 ```js run no-beautify
 alert("Ovdje će biti greška")
+=======
+No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
 
-[1, 2].forEach(alert)
+Now let's remove the semicolon after the `alert`:
+
+```js run no-beautify
+alert("Hello")
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 Sada ako pokrenemo kod, samo će se prvi `alert` pokazati i onda imamo grešku!
 
 Ali sve je dobro ponovo ako dodamo tačku-zarez poslije `alert`:
 ```js run
 alert("Sada je sve ok");
+=======
+The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 
-[1, 2].forEach(alert)  
-```
+If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
 
+<<<<<<< HEAD
 Sada imamo "Sada je sve ok" poruku a nakon toga `1` i `2`.
 
 
@@ -90,6 +109,19 @@ alert("Ovdje će biti greška")[1, 2].forEach(alert)
 ```
 
 Ali trebaju biti dvije različite izjave, a ne jedna. Povezivanje u ovom slučaju je pogrešno, i zbog toga se javlja greška. Ovo se može desiti u još nekim situacijama.
+=======
+That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+
+Here's how the engine sees it:
+
+```js run no-beautify
+alert("Hello")[1, 2].forEach(alert);
+```
+
+Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+
+This can happen in other situations also.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 ````
 
 Mi preporučujemo pisanje tačke-zareza između izjava iako su odvojene novom linijom. Ovo pravilo je široko usvojeno od strane zajednice. Hajdemo opet napomenuti *moguće* je izostaviti tačku-zarez u većini vremena. Ali je sigurnije -- pogotovo za početnika -- da se koriste.
