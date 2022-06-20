@@ -30,8 +30,13 @@ Prikaže modalni prozorčić sa tekstualnom porukom, polje za unos, i tipke OK/C
 `default`
 : Neobavezni drugi parametar, inicijalna vrijednost za polje unosa.
 
+<<<<<<< HEAD
 ```smart header="Srednje zagrade u sintaksi `[...]`"
 Srednje zagrade oko `default` u sintaksi pokazuju da je taj parametar opcionalan, nije potreban.
+=======
+```smart header="The square brackets in syntax `[...]`"
+The square brackets around `default` in the syntax above denote that the parameter is optional, not required.
+>>>>>>> 7964b11b8fa2c314d9a09a82ea4b585cda618c80
 ```
 
 Posjetilac može nešto u polje napisati i pritisnuti OK. Onda ćemo dobiti taj tekst kao `result`. Ili mogu prekinuti unos pritiskom na Cancel ili `key:Esc` tipku, i tada dobijamo `null` kao `rezultat`.
