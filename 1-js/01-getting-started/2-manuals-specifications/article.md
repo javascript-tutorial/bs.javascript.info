@@ -13,20 +13,32 @@ Nova verzija specifikacije izlazi svake godine. Između ovih izdanja, najnoviji 
 
 Da pročitate najnovije karakteristike, uključujući one koje su skoro postale "standard" (takozvana "faza 3"), pogledajte prijedloge na ovom linku <https://github.com/tc39/proposals>.
 
+<<<<<<< HEAD
 Isto tako, ako programirate u pretraživaču, postoje druge specifikacije koje su spomenute u [drugom dijelu](info:browser-environment) tutorijala.
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 ## Priručnici
 
+<<<<<<< HEAD
 - **MDN (Mozilla) JavaScript Referenca** je priručnik sa primjerima i ostalim informacijama. Odličan je izvor gdje možete naći dubinske informacije o individualnim funkcijama jezika, metodama, itd.
+=======
+- **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
     Možete naći na ovom linku <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
 
+<<<<<<< HEAD
      Mada često je najbolje koristiti pretrage na internetu. Samo napišite "MDN [pojam]" u pretragu, na primjer <https://google.com/search?q=MDN+parseInt> da pretražite internet za `parseInt` funkciju.
 
 
 - **MSDN** – Microsoft priručnik sa mnoštvo informacija, uključujući JavaScript (često se na stranici naziva JScript). Ako neko želi nešto specifično za Internet Explorer, najbolje je otići ovdje: <http://msdn.microsoft.com/>.
 
     Isto tako, možemo koristiti pretrage sa frazama kao što su "RegExp MSDN" ili "RegExp MSDN jscript".
+=======
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 ## Tablice kompatibilinosti
 
@@ -34,8 +46,13 @@ JavaScript je jezik koji se razvija, nove karakteristike se dodaju redovno.
 
 Da vidimo njihovu podršku među pretraživačima i ostalim motorima, pogledajte ove linkove:
 
+<<<<<<< HEAD
 - <http://caniuse.com> - po-funkciji tablice podrške, na primjer da vidimo koji motori podržavaju moderne kriptografske funkcije: <http://caniuse.com/#feat=cryptography>.
 - <https://kangax.github.io/compat-table> - tablica sa karakteristkima jezika i motorima koji podržavaju ili ne podržavaju te karakteristike.
+=======
+- <https://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 Svi ovi resursi su korisni tokom izrade pravih projekata, jer sadržavaju dragocjene informacije o detaljima jezika, njihovoj podršci itd.
 
