@@ -6,8 +6,13 @@ Na primjer, `alert` automatski pretvara bilo koju vrijednost u string da je prik
 
 Postoje slučajevi kada trebamo eksplicitno pretvoriti vrijednost u očekivani tip podatka.
 
+<<<<<<< HEAD
 ```smart header="Ne pričamo još o objektima"
 U ovom poglavlju, nećemo preći objekte. Za sada pričamo samo o primitivnim vrijednostima i tipovima.
+=======
+```smart header="Not talking about objects yet"
+In this chapter, we won't cover objects. For now, we'll just be talking about primitives.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 Kasnije, kada naučimo o objektima, u poglavlju <info:object-toprimitive> pogledat ćemo kako se objekti uklapaju.
 ```
