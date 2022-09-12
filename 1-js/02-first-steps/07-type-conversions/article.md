@@ -6,8 +6,13 @@ Na primjer, `alert` automatski pretvara bilo koju vrijednost u string da je prik
 
 Postoje slučajevi kada trebamo eksplicitno pretvoriti vrijednost u očekivani tip podatka.
 
+<<<<<<< HEAD
 ```smart header="Ne pričamo još o objektima"
 U ovom poglavlju, nećemo preći objekte. Za sada pričamo samo o primitivnim vrijednostima i tipovima.
+=======
+```smart header="Not talking about objects yet"
+In this chapter, we won't cover objects. For now, we'll just be talking about primitives.
+>>>>>>> 53b35c16835b7020a0a5046da5a47599d313bbb8
 
 Kasnije, kada naučimo o objektima, u poglavlju <info:object-toprimitive> pogledat ćemo kako se objekti uklapaju.
 ```
@@ -69,8 +74,13 @@ Pravila prilikom pretvaranja u brojeve:
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
+<<<<<<< HEAD
 |<code>true&nbsp;i&nbsp;false</code> | `1` i `0` |
 | `string` | Razmaci sa početka i kraja će biti izbrisani. Ako je preostali string prazan, rezultat je `0`. U suprotnom, broj je "očitan" iz string-a. Greška prilikom konverzije će dati `NaN`. |
+=======
+|<code>true&nbsp;and&nbsp;false</code> | `1` and `0` |
+| `string` | Whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from the start and end are removed. If the remaining string is empty, the result is `0`. Otherwise, the number is "read" from the string. An error gives `NaN`. |
+>>>>>>> 53b35c16835b7020a0a5046da5a47599d313bbb8
 
 Primjer:
 
@@ -130,7 +140,11 @@ Pravila konverzije:
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;/&nbsp;false</code> | `1 / 0` |
+<<<<<<< HEAD
 | `string` | String je pročitan "kakav jeste", razmaci sa obe strane su ignorisani. Prazan string je `0`. Greška prilikom konverzije daje `NaN`. |
+=======
+| `string` | The string is read "as is", whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from both sides are ignored. An empty string becomes `0`. An error gives `NaN`. |
+>>>>>>> 53b35c16835b7020a0a5046da5a47599d313bbb8
 
 **`Pretvaranje u boolean`** -- Javlja se u logičkim operacijama. Konverzija može biti izvršena sa `Boolean(value)`.
 
