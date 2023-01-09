@@ -50,23 +50,46 @@ Rezultat `a % b` je [ostatak](https://en.wikipedia.org/wiki/Remainder) prilikom 
 Na primjer:
 
 ```js run
+<<<<<<< HEAD
 alert( 5 % 2 ); // 1, ostatak prilikom dijeljenja 5 sa 2
 alert( 8 % 3 ); // 2, ostatak prilikom dijeljenja 8 sa 3
+=======
+alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
+alert( 8 % 4 ); // 0, the remainder of 8 divided by 4
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 ```
 
 ###  Eksponencija **
 
+<<<<<<< HEAD
 Operator eksponencije `a ** b` množi `a` sa sobom `b` puta.
+=======
+The exponentiation operator `a ** b` raises `a` to the power of `b`.
+
+In school maths, we write that as a<sup>b</sup>.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 Na primjer:
 
 ```js run
+<<<<<<< HEAD
 alert( 2 ** 2 ); // 4  (2 pomnoženo sa sobom 2 puta)
 alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 puta)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 puta)
 ```
 
 Matematički, eksponencija je određena i za ne-cijele brojeve. Na primjer, korijen je eksponencija od `1/2`:
+=======
+alert( 2 ** 2 ); // 2² = 4
+alert( 2 ** 3 ); // 2³ = 8
+alert( 2 ** 4 ); // 2⁴ = 16
+```
+
+Just like in maths, the exponentiation operator is defined for non-integer numbers as well.
+
+For example, a square root is an exponentiation by ½:
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (stepen od 1/2 je isti kao i kvadratni korijen)
@@ -76,7 +99,11 @@ alert( 8 ** (1/3) ); // 2 (stepen od 1/3 je isti kao kubični korijen)
 
 ##  Spajanje stringova sa binarnim +
 
+<<<<<<< HEAD
 Upoznajmo se sa mogućnostima JavaScript operatora koji su izvan školske aritmetike.
+=======
+Let's meet the features of JavaScript operators that are beyond school arithmetics.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 Obično, plus operator `+` sabira brojeve.
 
@@ -104,7 +131,16 @@ Evo jedan kompleksniji primjer:
 alert(2 + 2 + '1' ); // "41" a ne "221"
 ```
 
+<<<<<<< HEAD
 Ovdje, operatori rade jedan poslije drugog. Prvi `+` sabira dva broja, tako da vraća `4`, onda sljedeći `+` dodaje string `1`, tako da bude `4 + '1' = 41`.
+=======
+Here, operators work one after another. The first `+` sums two numbers, so it returns `4`, then the next `+` adds the string `1` to it, so it's like `4 + '1' = '41'`.
+
+```js run
+alert('1' + 2 + 2); // "122" and not "14"
+```
+Here, the first operand is a string, the compiler treats the other two operands as strings too. The `2` gets concatenated to `'1'`, so it's like `'1' + 2 = "12"` and `"12" + 2 = "122"`.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 Binarni `+` je jedini operator koji podržava string-ove na ovaj način. Ostali aritmetički operatori rade samo sa brojevima i uvijek pretvaraju operand-e u brojeve.
 
@@ -180,11 +216,16 @@ Zagrade nadjačavaju prioritete, tako da ako nismo zadovoljni sa uobičajenim re
 
 Postoji mnogo operatora u JavaScript-u. Svaki operator ima određeni nivo prioriteta. Onaj sa većim nivoom se prvi izvršava. Ako je prioritet isti, red izvršavanja je od lijeve ka desnoj strani.
 
+<<<<<<< HEAD
 Evo ekstrakta iz [tabele prioriteta](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (ne trebate ovo zapamtiti, ali zapamtite samo da su unary operatori veći od odgovarajućeg binarnog):
+=======
+Here's an extract from the [precedence table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 | Prioritet | Ime | Znak |
 |------------|------|------|
 | ... | ... | ... |
+<<<<<<< HEAD
 | 17 | unary plus | `+` |
 | 17 | unary negacija | `-` |
 | 16 | eksponencija | `**` |
@@ -199,6 +240,24 @@ Evo ekstrakta iz [tabele prioriteta](https://developer.mozilla.org/en/JavaScript
 Kao što možemo da vidimo, "unary plus" ima prioritet `17` koji je veći od `13` prioriteta "sabiranja" (binarni plus). Zato, u izrazu `"+apples + +oranges"`, unary plus se prije sabiranja izvršava.
 
 ## Dodjela
+=======
+| 14 | unary plus | `+` |
+| 14 | unary negation | `-` |
+| 13 | exponentiation | `**` |
+| 12 | multiplication | `*` |
+| 12 | division | `/` |
+| 11 | addition | `+` |
+| 11 | subtraction | `-` |
+| ... | ... | ... |
+| 2 | assignment | `=` |
+| ... | ... | ... |
+
+As we can see, the "unary plus" has a priority of `14` which is higher than the `11` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+
+## Assignment
+
+Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `2`.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 Zapamtite da je dodjela `=` isto operator. Na listi prioriteta ima mali prioritet `3`.
  
@@ -214,7 +273,11 @@ alert( x ); // 5
 
 Činjenica da je `=` operator, a ne "magični" jezički konstrukt ima interesantnu implikaciju.
 
+<<<<<<< HEAD
 Većina operatora u JavaScript-u vraćaju vrijednost. To je očigledno za `+` i `-`, ali to isto vrijedi za `=`.
+=======
+All operators in JavaScript return a value. That's obvious for `+` and `-`, but also true for `=`.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 Poziv `x = value` piše `value` u `x` *pa je vraća*.
 
@@ -294,9 +357,13 @@ Takvi operatori imaju isti prioritet kao i prilikom normalnog dodijeljivanja, ta
 ```js run
 let n = 2;
 
-n *= 3 + 5;
+n *= 3 + 5; // right part evaluated first, same as n *= 8
 
+<<<<<<< HEAD
 alert( n ); // 16  (desni dio je prvi evaluiran, isto kao n *= 8)
+=======
+alert( n ); // 16
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 ```
 
 ## Povećavanje/smanjivanje (eng. increment/decrement)
@@ -428,7 +495,11 @@ Lista operatora:
 - RIGHT SHIFT ( `>>` )
 - ZERO-FILL RIGHT SHIFT ( `>>>` )
 
+<<<<<<< HEAD
 Ovi operatori se veoma rijetko koriste, kada trebamo da radimo sa brojevima na veoma niskom (bitwise) nivou. Ovi operatori nam neće trebati u bližoj budućnosti, jer u web programiranju imaju malu upotrebu, ali u nekim specijalnim oblastima kao što su kriptografija, su korisni. Možete pročitati [Bitwise Operatori](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) poglavlje na MDN kada vam zatreba.
+=======
+These operators are used very rarely, when we need to fiddle with numbers on the very lowest (bitwise) level. We won't need these operators any time soon, as web development has little use of them, but in some special areas, such as cryptography, they are useful. You can read the [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) chapter on MDN when a need arises.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 ## Zarez (eng. comma)
 
