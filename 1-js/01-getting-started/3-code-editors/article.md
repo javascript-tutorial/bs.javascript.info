@@ -12,8 +12,13 @@ IDE učitava projekat (koji se može sastojiti od više datoteka), omogućava na
 
 Ako još niste odabrali IDE, možete uzeti u obzir sljedeće opcije:
 
+<<<<<<< HEAD
 - [Visual Studio Code](https://code.visualstudio.com/) (radi na različitim operativnim sistemima (cross-platform), besplatan).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (radi na različitim operativnim sistemima (cross-platform), plaća se).
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
 
 Za Windows, postoji "Visual Studio", kojeg ne treba miješati sa "Visual Studio Code". "Visual Studio" je program koji se plaća i on radi samo na Windows operativnom sistemu, dobro prilagođen za .NET platformu. Isto tako je dobar za JavaScript. Postoji i besplatna verzija na sljedećem linku [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
@@ -29,6 +34,7 @@ Glavna razlika između "laganog editora" i "IDE" jeste to što IDE radi dobro ka
 
 U praksi, lagani editori većinom imaju dosta više plugin-ova (dodataka) uključujući analizatore i automatsko dovršavanje koda na nivou direktorija, tako da nema neke tačne granice između IDE i laganog editora.
 
+<<<<<<< HEAD
 Sljedeće opcije zaslužuju vašu pažnju:
 
 - [Atom](https://atom.io/) (cross-platform, besplatan).
@@ -36,6 +42,13 @@ Sljedeće opcije zaslužuju vašu pažnju:
 - [Sublime Text](http://www.sublimetext.com) (cross-platform, besplatan određeno vrijeme).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, besplatan).
 - [Vim](http://www.vim.org/) i [Emacs](https://www.gnu.org/software/emacs/) su isto zanimljivi ako ih znate koristiti.
+=======
+There are many options, for instance:
+
+- [Sublime Text](https://www.sublimetext.com/) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](https://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
 
 ## Nemojmo se prepirati
 
@@ -43,4 +56,13 @@ Editori u listi iznad su editori koje ja koristim ili moji prijatelji koje smatr
 
 Postoje još izvanrednih editora u našem velikom svijetu. Molim vas da izaberete onaj koji se vama najviše sviđa.
 
+<<<<<<< HEAD
 Izbor editora, kao i bilo kojeg drugog alata, je individualna stvar i zavisi od vaših projekata, navika kao i ličnih preferencija.
+=======
+The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+
+The author's personal opinion:
+
+- I'd use [Visual Studio Code](https://code.visualstudio.com/) if I develop mostly frontend.
+- Otherwise, if it's mostly another language/platform and partially frontend, then consider other editors, such as XCode (Mac), Visual Studio (Windows) or Jetbrains family (Webstorm, PHPStorm, RubyMine etc, depending on the language).
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
