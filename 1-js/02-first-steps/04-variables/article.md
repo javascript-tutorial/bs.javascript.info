@@ -24,7 +24,11 @@ Sada, možemo staviti podatke u nju putem operatora dodjele `=`:
 let poruka;
 
 *!*
+<<<<<<< HEAD
 poruka = 'Hello'; // store the string
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 */!*
 ```
 
@@ -63,7 +67,12 @@ let godine = 25;
 let poruka = 'Hello';
 ```
 
+<<<<<<< HEAD
 Neki ljudi isto deklarišu više varijabli u ovom multilinijskom stilu:
+=======
+Some people also define multiple variables in this multiline style:
+
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 ```js no-beautify
 let korisnik = 'John',
   godine = 25,
@@ -102,7 +111,12 @@ Na primjer, varijabla `poruka` može biti zamišljena kao kutija na kojoj piše 
 
 Možemo postaviti bilo koju vrijednost u kutiju.
 
+<<<<<<< HEAD
 Isto tako je možemo promijeniti koliko puta hoćemo:
+=======
+We can also change it as many times as we want:
+
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 ```js run
 let poruka;
 
@@ -148,12 +162,21 @@ let poruka = "Ono"; // SyntaxError: 'poruka' has already been declared (ova gre�
 Tako da varijablu samo jednom trebamo deklarisati, i onda se na nju odnositi bez `let`.
 ````
 
+<<<<<<< HEAD
 ```smart header="Funkcionalni jezici"
 Interesantno je napomenuti da postoje [funkcionalni](https://en.wikipedia.org/wiki/Functional_programming) programski jezici, kao što je [Scala](http://www.scala-lang.org/) ili [Erlang](http://www.erlang.org/) koji zabranjuju mijenjanje vrijednosti varijable.
+=======
+```smart header="Functional languages"
+It's interesting to note that there exist so-called [pure functional](https://en.wikipedia.org/wiki/Purely_functional_programming) programming languages, such as [Haskell](https://en.wikipedia.org/wiki/Haskell), that forbid changing variable values.
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 
 U takvim jezicima, kada je vrijednost pohranjena "u kutiju", tu je zauvijek. Ako želimo da pohranimo nešto drugo, jezik nas tjera da napravimo novu kutiju (da deklarišemo novu varijablu). Ne možemo ponovo upotrijebiti staru.
 
+<<<<<<< HEAD
 Iako zvuči malo čudno na prvi pogled, ovi jezici su veoma sposobni za ozbiljan razvoj. Još bolje od toga, postoje područja kao što su paralelno računanje gdje ova limitacija doprinosi određene prednosti. Učenje ovakvih jezika (iako ih ne planirate koristiti ubrzo) je preporučeno da proširite um.
+=======
+Though it may seem a little odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits.
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 ```
 
 ## Imenovanje varijabli [#variable-naming]
@@ -191,6 +214,7 @@ let 1a; // ne smije započeti sa brojem
 let my-name; // crtica nije dozvoljena u imenu
 ```
 
+<<<<<<< HEAD
 ```smart header="Velika i mala slova su bitna"
 Varijable nazvane `jabuka` i `jabuKA` su dvije različite varijable.
 ```
@@ -199,6 +223,14 @@ Varijable nazvane `jabuka` i `jabuKA` su dvije različite varijable.
 / Napomena: Ja prevodim sa engleskog na bosanski jezik, zato koristim č,ć,š,đ,ž u varijablama, ali preporučeno je koristiti normalna engleska slova. Od sada će varijable i cijeli kod biti na engleskom jeziku, ne brinite, i dalje ću prevesti tekst zadataka, ali će kod u istim biti na engleski. - prevodioc @aiyodev /
 
 Moguće je koristiti bilo koji jezik, uključujući ćirilična slova i čak hieroglife, kao ovdje:
+=======
+```smart header="Case matters"
+Variables named `apple` and `APPLE` are two different variables.
+```
+
+````smart header="Non-Latin letters are allowed, but not recommended"
+It is possible to use any language, including cyrillic letters, Chinese logograms and so on, like this:
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 
 ```js
 let имя = '...';
@@ -262,8 +294,12 @@ myBirthday = '01.01.2001'; // greška, ne može se promijeniti vrijednost konsta
 
 Kada je programer siguran da se varijabla nikada neće promijeniti, onda je mogu deklarisati putem `const` da garantuju i da jasno komuniciraju tu činjenicu svima.
 
+<<<<<<< HEAD
 
 ### Konstante napisane velikim slovima
+=======
+### Uppercase constants
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 
 Postoji široko rasprostranjena praksa da se konstante koriste kao nadimak za vrijednosti koje su poznate prije izvršavanja i koje je teško zapamtiti.
 
@@ -292,14 +328,23 @@ Kada trebamo koristiti velika slova za konstante a kada ćemo ih nazvati normaln
 
 "Konstantna" varijabla znači da se njena vrijednost nikada ne mijenja. Ali postoje konstante koje su poznate prije izvršavanja (kao heksadecimalna vrijednost za crvenu boju) i postoje konstante koje su *izračunate* tokom izvršavanja, ali se opet ne mijenjaju nakon početne dodjele.
 
+<<<<<<< HEAD
 Na primjer:
+=======
+For instance:
+
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 ```js
 const pageLoadTime = /* vrijeme potrebno da se stranica učita */;
 ```
 
 Vrijednost `pageLoadTime` nije poznata prije učitavanja stranice, tako da je ovako nazvana. Ali i dalje je konstanta jer ne mijenja vrijednost poslije inicijalne dodjele.
 
+<<<<<<< HEAD
 U drugim riječima, konstante napisane velikim slovima se samo koriste kao nadimci za "tvrdo-kodirane" vrijednosti.
+=======
+In other words, capital-named constants are only used as aliases for "hard-coded" values.
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 
 ## Imenujte varijable ispravno
 
