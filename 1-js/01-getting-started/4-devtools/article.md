@@ -22,7 +22,7 @@ Alatke za programere će se otvoriti na tabu sa konzolom po uobičajenom.
 
 Izgledati će otprilike ovako:
 
-![chrome](chrome.png)
+![chrome](chrome.webp)
 
 Izgled vaše alatke zavisi od verzije Chrome-a. Vremenom se izgled mijenja, ali trebalo bi izgledati slično.
 
@@ -49,7 +49,11 @@ Njihov izgled i osjećaj je jako sličan. Kada znate koristiti jednu vrstu ove a
 
 Safari (Mac pretraživač, nije podržan od strane Windows/Linux) je ovdje malo specijalan. Moramo uključiti "meni za razvoj" (eng. develop menu) prvo.
 
+<<<<<<< HEAD
 Otvorite postavke i idite na "napredni" (eng. advanced) dio. Tu se na dnu nalazi opcija koju trebate zabilježiti:
+=======
+Open Settings and go to the "Advanced" pane. There's a checkbox at the bottom:
+>>>>>>> 52c1e61915bc8970a950a3f59bd845827e49b4bf
 
 ![safari](safari.png)
 
