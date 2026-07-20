@@ -6,7 +6,11 @@ To je jednostavno:
 let imeNašePlanete = "Zemlja";
 ```
 
+<<<<<<< HEAD
 Zapamtite, možemo koristiti kraće ime poput `planeta`, ali možda ne bi bilo očigledno na koju se planetu odnosi. Bolje je biti opširniji kada imenujemo varijable. Ali ne trebamo biti preopširni.
+=======
+Note, we could use a shorter name `planet`, but it might not be obvious what planet it refers to. It's nice to be more verbose. At least until the variable isNotTooLong.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 ## Ime trenutnog posjetioca stranice
 

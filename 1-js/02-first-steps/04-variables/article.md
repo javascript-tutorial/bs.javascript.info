@@ -24,7 +24,11 @@ Sada, možemo staviti podatke u nju putem operatora dodjele `=`:
 let poruka;
 
 *!*
+<<<<<<< HEAD
 poruka = 'Hello'; // store the string
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 */!*
 ```
 
@@ -63,7 +67,12 @@ let godine = 25;
 let poruka = 'Hello';
 ```
 
+<<<<<<< HEAD
 Neki ljudi isto deklarišu više varijabli u ovom multilinijskom stilu:
+=======
+Some people also define multiple variables in this multiline style:
+
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ```js no-beautify
 let korisnik = 'John',
   godine = 25,
@@ -87,22 +96,37 @@ U starijim skriptama, možete naći još jednu ključnu riječ: `var` umjesto `l
 *!*var*/!* poruka = 'Hello';
 ```
 
+<<<<<<< HEAD
 `var` ključna rijec je *skoro* ista kao `let`. Isto deklariše varijablu, ali u malom drugačijem, "stara-škola" (eng. old-school) načinu.
 
 Postoji manjih razlika između `let` i `var`, ali one za nas nisu još bitne. Proučit ćemo ih u detalje u poglavlju <info:var>.
+=======
+The `var` keyword is *almost* the same as `let`. It also declares a variable but in a slightly different, "old-school" way.
+
+There are subtle differences between `let` and `var`, but they do not matter to us yet. We'll cover them in detail in the chapter <info:var>.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ````
 
 ## Stvarna životna analogija
 
 Možemo lagano shvatiti koncept "varijable" ako je zamislimo kao "kutiju" za podatke, sa unikatno imenovanim naljepnicama.
 
+<<<<<<< HEAD
 Na primjer, varijabla `poruka` može biti zamišljena kao kutija na kojoj piše `"poruka"` koja u sebi ima vrijednost "Hello!".
+=======
+For instance, the variable `message` can be imagined as a box labelled `"message"` with the value `"Hello!"` in it:
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 ![](variable.svg)
 
 Možemo postaviti bilo koju vrijednost u kutiju.
 
+<<<<<<< HEAD
 Isto tako je možemo promijeniti koliko puta hoćemo:
+=======
+We can also change it as many times as we want:
+
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ```js run
 let poruka;
 
@@ -148,12 +172,21 @@ let poruka = "Ono"; // SyntaxError: 'poruka' has already been declared (ova gre�
 Tako da varijablu samo jednom trebamo deklarisati, i onda se na nju odnositi bez `let`.
 ````
 
+<<<<<<< HEAD
 ```smart header="Funkcionalni jezici"
 Interesantno je napomenuti da postoje [funkcionalni](https://en.wikipedia.org/wiki/Functional_programming) programski jezici, kao što je [Scala](http://www.scala-lang.org/) ili [Erlang](http://www.erlang.org/) koji zabranjuju mijenjanje vrijednosti varijable.
+=======
+```smart header="Functional languages"
+It's interesting to note that there exist so-called [pure functional](https://en.wikipedia.org/wiki/Purely_functional_programming) programming languages, such as [Haskell](https://en.wikipedia.org/wiki/Haskell), that forbid changing variable values.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 U takvim jezicima, kada je vrijednost pohranjena "u kutiju", tu je zauvijek. Ako želimo da pohranimo nešto drugo, jezik nas tjera da napravimo novu kutiju (da deklarišemo novu varijablu). Ne možemo ponovo upotrijebiti staru.
 
+<<<<<<< HEAD
 Iako zvuči malo čudno na prvi pogled, ovi jezici su veoma sposobni za ozbiljan razvoj. Još bolje od toga, postoje područja kao što su paralelno računanje gdje ova limitacija doprinosi određene prednosti. Učenje ovakvih jezika (iako ih ne planirate koristiti ubrzo) je preporučeno da proširite um.
+=======
+Though it may seem a little odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ```
 
 ## Imenovanje varijabli [#variable-naming]
@@ -170,7 +203,11 @@ let korisničkoIme;
 let test123;
 ```
 
+<<<<<<< HEAD
 Kada ime sadrži više riječi, [camelCase](https://en.wikipedia.org/wiki/CamelCase) se često koristi. To je: riječi idu jedna iza druge, svaka riječ osim prve započinje sa velikim slovom `mojeVeomaDugoIme`.
+=======
+When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki/CamelCase) is commonly used. That is: words go one after another, with each word except the first starting with a capital letter: `myVeryLongName`.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 Šta je interesantno -- znak dolara `'$'` i donja crtica `'_'` mogu se isto koristiti u imenima. To su obični simboli, kao i slova, bez specijalnog značenja.
 
@@ -191,6 +228,7 @@ let 1a; // ne smije započeti sa brojem
 let my-name; // crtica nije dozvoljena u imenu
 ```
 
+<<<<<<< HEAD
 ```smart header="Velika i mala slova su bitna"
 Varijable nazvane `jabuka` i `jabuKA` su dvije različite varijable.
 ```
@@ -199,13 +237,25 @@ Varijable nazvane `jabuka` i `jabuKA` su dvije različite varijable.
 / Napomena: Ja prevodim sa engleskog na bosanski jezik, zato koristim č,ć,š,đ,ž u varijablama, ali preporučeno je koristiti normalna engleska slova. Od sada će varijable i cijeli kod biti na engleskom jeziku, ne brinite, i dalje ću prevesti tekst zadataka, ali će kod u istim biti na engleski. - prevodioc @aiyodev /
 
 Moguće je koristiti bilo koji jezik, uključujući ćirilična slova i čak hieroglife, kao ovdje:
+=======
+```smart header="Case matters"
+Variables named `apple` and `APPLE` are two different variables.
+```
+
+````smart header="Non-Latin letters are allowed, but not recommended"
+It is possible to use any language, including Cyrillic letters, Chinese logograms and so on, like this:
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 ```js
 let имя = '...';
 let 我 = '...';
 ```
 
+<<<<<<< HEAD
 Tehnički, ovdje nema greške. Ovakva imena su dozvoljena, ali postoji internacionalna konvencija da se koristi engleski jezik prilikom imenovanja. Iako pišemo malu skriptu, može imati dug život ispred sebe. Ljudi iz ostalih zemalja će možda nekada trebati da pročitaju.
+=======
+Technically, there is no error here. Such names are allowed, but there is an international convention to use English in variable names. Even if we're writing a small script, it may have a long life ahead. People from other countries may need to read it sometime.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ````
 
 ````warn header="Rezervisana imena"
@@ -260,12 +310,20 @@ const myBirthday = '18.04.1982';
 myBirthday = '01.01.2001'; // greška, ne može se promijeniti vrijednost konstante!
 ```
 
+<<<<<<< HEAD
 Kada je programer siguran da se varijabla nikada neće promijeniti, onda je mogu deklarisati putem `const` da garantuju i da jasno komuniciraju tu činjenicu svima.
 
+=======
+When a programmer is sure that a variable will never change, they can declare it with `const` to guarantee and communicate that fact to everyone.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 ### Konstante napisane velikim slovima
 
+<<<<<<< HEAD
 Postoji široko rasprostranjena praksa da se konstante koriste kao nadimak za vrijednosti koje su poznate prije izvršavanja i koje je teško zapamtiti.
+=======
+There is a widespread practice to use constants as aliases for difficult-to-remember values that are known before execution.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 Takve konstante nazivamo koristeći velika slova i donje crtice.
 
@@ -290,16 +348,29 @@ Prednosti:
 
 Kada trebamo koristiti velika slova za konstante a kada ćemo ih nazvati normalno? Hajmo učiniti to malo jasnije.
 
+<<<<<<< HEAD
 "Konstantna" varijabla znači da se njena vrijednost nikada ne mijenja. Ali postoje konstante koje su poznate prije izvršavanja (kao heksadecimalna vrijednost za crvenu boju) i postoje konstante koje su *izračunate* tokom izvršavanja, ali se opet ne mijenjaju nakon početne dodjele.
 
 Na primjer:
+=======
+Being a "constant" just means that a variable's value never changes. But some constants are known before execution (like a hexadecimal value for red) and some constants are *calculated* in run-time, during the execution, but do not change after their initial assignment.
+
+For instance:
+
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ```js
 const pageLoadTime = /* vrijeme potrebno da se stranica učita */;
 ```
 
+<<<<<<< HEAD
 Vrijednost `pageLoadTime` nije poznata prije učitavanja stranice, tako da je ovako nazvana. Ali i dalje je konstanta jer ne mijenja vrijednost poslije inicijalne dodjele.
 
 U drugim riječima, konstante napisane velikim slovima se samo koriste kao nadimci za "tvrdo-kodirane" vrijednosti.
+=======
+The value of `pageLoadTime` is not known before the page load, so it's named normally. But it's still a constant because it doesn't change after the assignment.
+
+In other words, capital-named constants are only used as aliases for "hard-coded" values.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 ## Imenujte varijable ispravno
 
@@ -307,18 +378,31 @@ Pričajući o varijablama, ima još jedna ekstremno bitna stvar.
 
 Ime varijable mora imati jasno, očigledno značenje, koje opisuje podatke koje u sebe pohranjuje.
 
+<<<<<<< HEAD
 Imenovanje varijabli je jedna od najvažnijih i najkompleksnijih vještina u programiranju. Brz pogled na nečija imena varijabli može otkriti da li je taj kod pisan od strane početnika ili iskusnog programera.
 
 U pravom projektu, većina vremena je potrošena na modificiranje i proširivanje već postojeće baze koda a ne pisanja nečega totalno odvojenog od početka. Kada se vratimo na kod nakon nekog vremena, puno je lakše naći informacije koje su dobro imenovane. Ili, u drugim riječima, kada varijable imaju jasna imena.
+=======
+Variable naming is one of the most important and complex skills in programming. A glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+
+In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. When we return to some code after doing something else for a while, it's much easier to find information that is well-labelled. Or, in other words, when the variables have good names.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 Molimo vas, provedite vremena razmišljajući o dobrom imenu za varijablu prije nego što je deklarišete. Radeći to, isplatit će vam se kasnije.
 
 Neka dobra pravila za pratiti su:
 
+<<<<<<< HEAD
 - Koristite imena koja ljudi mogu pročitati kao što su `userName` ili `shoppingCart`.
 - Nemojte koristiti skraćenice ili kratka imena kao `a`, `b` ili `c`, osim ako znate sto posto šta radite.
 - Nek vam imena budu maksimalno detaljna, ali i sažeta. Primjeri loših imena su `data` i `value`. Takva imena ne govore ništa. Okej ih je samo koristiti u kontekstu kada je izuzetno očigledno na šta se varijabla odnosi.
 - Prihvatite uslove unutar vašeg tima. Ako je posjetilac stranice "user" onda trebamo nazvati srodne varijable `currentUser` ili `newUser` umjesto `currentVisitor` ili `newManInTown`.
+=======
+- Use human-readable names like `userName` or `shoppingCart`.
+- Stay away from abbreviations or short names like `a`, `b`, and `c`, unless you know what you're doing.
+- Make names maximally descriptive and concise. Examples of bad names are `data` and `value`. Such names say nothing. It's only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
+- Agree on terms within your team and in your mind. If a site visitor is called a "user" then we should name related variables `currentUser` or `newUser` instead of `currentVisitor` or `newManInTown`.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 Zvuči jednostavno? Itekako jeste, ali kreiranje deskriptivnih i sažetih imena za varijable u praksi nije. Probaj sam.
 
